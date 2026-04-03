@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Send, Clover, Radio, Sparkles, Zap } from 'lucide-react'
 
@@ -9,7 +11,24 @@ export default function IdeasFooter() {
          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 md:gap-24 mb-32">
             {/* Brand & Mission */}
             <div className="md:col-span-1 space-y-8">
-               <h2 className="text-2xl font-black text-[#FDE68B] tracking-tighter uppercase italic">MediaMatic<br />Studio</h2>
+               <Link href="/" className="inline-block group">
+                  <div className="flex items-center gap-4">
+                     <div className="relative w-12 h-12 flex items-center justify-center">
+                        <div className="absolute inset-0 bg-[#FDE68B]/10 rounded-full blur-xl scale-0 group-hover:scale-150 transition-transform duration-700" />
+                        <Image
+                           src="/lOGO.webp"
+                           alt="MMS Logo"
+                           width={48}
+                           height={48}
+                           className="object-contain filter brightness-125"
+                        />
+                     </div>
+                     <div className="flex flex-col">
+                        <span className="text-[#FDE68B] font-black tracking-tighter text-2xl italic uppercase group-hover:text-white transition-all">MMS.</span>
+                        <span className="text-[7px] text-[#FDE68B]/40 font-bold tracking-[0.3em] -mt-1 group-hover:text-[#FDE68B]/80 transition-all">EST. 2024</span>
+                     </div>
+                  </div>
+               </Link>
                <p className="text-[#FDE68B]/60 text-sm leading-relaxed max-w-xs uppercase font-bold tracking-tight">
                   Aiming to be one of the global fortune company by 2030. Delivering realistic, cost effective & high-quality services.
                </p>

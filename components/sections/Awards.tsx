@@ -12,7 +12,7 @@ const milestones = [
 
 export default function IdeasAwards() {
   return (
-    <section id="milestones" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#FDE68B]/5">
+    <section id="milestones" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#CFCFCF]/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between mb-24 gap-8">
           <div className="md:w-1/2">
@@ -30,7 +30,7 @@ export default function IdeasAwards() {
 
         <div className="relative space-y-24">
           {/* Vertical Timeline Line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-[#FDE68B]/10 hidden md:block" />
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-[#FDE68B]/20 hidden md:block" />
 
           {milestones.map((item, index) => (
             <motion.div
@@ -39,21 +39,31 @@ export default function IdeasAwards() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
-              className={`flex flex-col md:flex-row items-center gap-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+              className={`flex flex-col md:flex-row items-center gap-12 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                }`}
             >
-              <div className={`flex-1 text-center ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
-                <span className="text-8xl md:text-9xl font-black text-[#FDE68B]/5 tracking-tighter block mb-4 italic leading-none">
+              <div
+                className={`flex-1 text-center ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'
+                  }`}
+              >
+                {/* Year */}
+                <span className="text-7xl md:text-8xl font-black text-[#FDE68B]/30 tracking-tight block mb-4 italic leading-none drop-shadow-[0_0_18px_rgba(253,230,138,0.25)]">
                   {item.year}
                 </span>
-                <h3 className="text-2xl md:text-3xl font-black text-[#FDE68B] tracking-tight uppercase mb-4">
+
+                {/* Title */}
+                <h3 className="text-2xl md:text-3xl font-black text-[#FDE68B] tracking-tight uppercase mb-4 drop-shadow-md">
                   {item.title}
                 </h3>
-                <p className="text-[#FDE68B]/60 text-sm max-w-sm mx-auto md:mx-0 font-medium leading-relaxed uppercase tracking-widest">
+
+                {/* Description */}
+                <p className="text-[#FDE68B]/80 text-sm md:text-base max-w-md mx-auto md:mx-0 font-medium leading-relaxed tracking-wide">
                   {item.desc}
                 </p>
               </div>
 
-              <div className="w-12 h-12 rounded-full bg-[#FDE68B] border-4 border-[#181818] z-10 flex items-center justify-center text-[#181818] shadow-xl shadow-[#FDE68B]/20">
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-full bg-[#FDE68B] border-4 border-[#181818] z-10 flex items-center justify-center text-[#181818] shadow-lg shadow-[#FDE68B]/30">
                 <Trophy size={18} />
               </div>
 

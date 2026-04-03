@@ -1,58 +1,103 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Sparkles, Code, Users, CheckCircle, TrendingUp, MonitorPlay, Hammer, Target } from 'lucide-react'
+import { Sparkles, Code, Users, CheckCircle, TrendingUp, MonitorPlay, UserPlus, Target } from 'lucide-react'
 
 const highlights = [
-  { id: 1, title: 'Innovative Designs', icon: <Sparkles size={24} />, color: 'from-[#ff6a2b]/30 to-[#e06c3a]/5' },
-  { id: 2, title: 'Latest Technologies', icon: <Code size={24} />, color: 'from-[#1a1a1a]/40 to-[#111]/10' },
-  { id: 3, title: 'Professional Team', icon: <Users size={24} />, color: 'from-[#ff6a2b]/20 to-[#7f2b00]/5' },
-  { id: 4, title: 'Internal Quality Audits', icon: <CheckCircle size={24} />, color: 'from-[#e06c3a]/30 to-[#ff6a2b]/5' },
-  { id: 5, title: 'Result Driven Projects', icon: <TrendingUp size={24} />, color: 'from-[#1a1a1a]/40 to-[#111]/10' },
-  { id: 6, title: 'Real Time project updates', icon: <MonitorPlay size={24} />, color: 'from-[#ff6a2b]/10 to-[#7f2b00]/5' },
-  { id: 7, title: 'Dedicated Project Manager', icon: <Hammer size={24} />, color: 'from-[#e06c3a]/20 to-[#ff6a2b]/5' },
-  { id: 8, title: 'Customized Business Solution', icon: <Target size={24} />, color: 'from-[#1a1a1a]/50 to-[#0c0c0c]/10' },
+  { id: 1, title: 'Innovative Designs', icon: Sparkles },
+  { id: 2, title: 'Latest Technologies', icon: Code },
+  { id: 3, title: 'Professional Team', icon: Users },
+  { id: 4, title: 'Internal Quality Audits', icon: CheckCircle },
+  { id: 5, title: 'Result Driven Projects', icon: TrendingUp },
+  { id: 6, title: 'Real Time project updates', icon: MonitorPlay },
+  { id: 7, title: 'Dedicated Project Manager', icon: UserPlus },
+  { id: 8, title: 'Customized Business Solution', icon: Target },
 ]
 
 export default function ProjectHighlights() {
   return (
-    <section className="bg-[#181818] py-32 px-6 overflow-hidden relative border-t border-[#FDE68B]/5">
+    <section className="bg-[#181818] py-24 px-6 overflow-hidden relative border-t border-[#FDE68B]/5">
+      {/* Background Images */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: "url('/back drop.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div
+          className="absolute -top-20 -right-20 w-[600px] h-[600px] opacity-[0.03] rotate-12"
+          style={{
+            backgroundImage: "url('/bg doodle.png')",
+            backgroundSize: 'contain',
+            backgroundRepeat: 'no-repeat',
+          }}
+        />
+      </div>
 
-      {/* Decorative background circle - Burgundy tint */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] rounded-full bg-[#FDE68B]/5 blur-[120px] pointer-events-none" />
+      <div className="max-w-6xl mx-auto relative z-10">
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <center className="mb-24">
-          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block animate-bounce">PROJECT HIGHLIGHTS</span>
-          <h2 className="text-4xl md:text-6xl font-bold text-[#FDE68B] tracking-tighter">Crafted with Perfection</h2>
-        </center>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-12 auto-rows-[220px] md:auto-rows-[250px]">
-          {highlights.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: index * 0.1, type: "spring", stiffness: 100 }}
-              whileHover={{ y: -15, scale: 1.05 }}
-              className={`flex flex-col items-center justify-center text-center p-8 rounded-full border border-[#FDE68B]/10 glassmorphism-orb bg-gradient-to-br from-[#FDE68B]/10 to-[#FDE68B]/5 shadow-xl relative group cursor-pointer`}
-              style={{
-                backdropFilter: 'blur(12px)',
-              }}
-            >
-              <div className="mb-4 text-[#FDE68B] drop-shadow-[0_0_8px_rgba(101,43,50,0.2)] group-hover:animate-pulse">
-                {item.icon}
-              </div>
-              <h3 className="text-[#FDE68B] font-bold text-sm md:text-base leading-tight px-4 group-hover:opacity-70 transition-opacity">
-                {item.title}
-              </h3>
-
-              {/* Animated Ring on Hover */}
-              <div className="absolute inset-0 rounded-full border-2 border-[#FDE68B]/0 group-hover:border-[#FDE68B]/30 group-hover:scale-110 transition-all duration-700" />
-            </motion.div>
-          ))}
+        {/* Header */}
+        <div className="text-center mb-16">
+          {/* <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-3 block opacity-60">
+            Project Highlights
+          </span> */}
+          <h2 className="text-4xl md:text-5xl font-black text-[#FDE68B] tracking-tighter uppercase italic leading-none">
+            Project Highlights
+          </h2>
         </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#FDE68B]/10 border border-[#FDE68B]/10">
+          {highlights.map((item, index) => {
+            const Icon = item.icon
+            return (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.45, delay: index * 0.06, ease: 'easeOut' }}
+                className="relative bg-[#181818]/80 backdrop-blur-sm p-8 flex flex-col gap-6 group cursor-default overflow-hidden border-r border-b border-[#FDE68B]/5"
+              >
+                {/* Top sweep bar on hover */}
+                <div className="absolute top-0 left-0 h-[3px] bg-[#FDE68B] w-0 group-hover:w-full transition-all duration-[400ms] easy-in-out shadow-[0_0_15px_rgba(253,230,139,0.5)]" />
+
+                <div className="flex justify-between items-start">
+                  {/* Index label */}
+                  <span className="text-[#FDE68B] text-[10px] font-black opacity-30 italic">
+                    {String(item.id).padStart(2, '0')}
+                  </span>
+
+                  {/* Icon box */}
+                  <div className="w-10 h-10 border border-[#FDE68B]/20 flex items-center justify-center flex-shrink-0 rounded-lg group-hover:bg-[#FDE68B] group-hover:text-[#181818] transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-[#FDE68B]/5">
+                    <Icon size={18} className="text-inherit" strokeWidth={2} />
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="text-white text-lg font-black leading-tight tracking-tight uppercase italic group-hover:text-[#FDE68B] transition-colors">
+                  {item.title}
+                </h3>
+
+                {/* Bottom dot decorative */}
+                <div className="w-6 h-[2px] bg-[#FDE68B] opacity-20 mt-auto group-hover:w-full group-hover:opacity-40 transition-all duration-500" />
+              </motion.div>
+            )
+          })}
+        </div>
+
+        {/* Footer rule */}
+        <div className="flex items-center gap-4 mt-12 opacity-20">
+          <div className="flex-1 h-px bg-[#FDE68B]" />
+          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.5em] uppercase">
+            MMS CORE SYSTEM
+          </span>
+          <div className="flex-1 h-px bg-[#FDE68B]" />
+        </div>
+
       </div>
     </section>
   )
