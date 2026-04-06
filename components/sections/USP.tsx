@@ -45,7 +45,7 @@ export default function IdeasUSP() {
     <section id="our-usp" className="bg-[#181818] py-24 px-6 md:px-16 relative border-t border-[#FDE68B]/5">
       <div className="max-w-5xl mx-auto">
         <div className="mb-16">
-          {/* <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-3 block">WHY CHOOSE US</span> */}
+          {/* <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-3 block">WHY CHOOSE US</span> */}
           <h2 className="font-['Bebas_Neue'] text-[clamp(52px,6vw,88px)] leading-[.93] text-[#FDE68B]">
             WHY CHOOSE US
           </h2>
@@ -72,9 +72,9 @@ export default function IdeasUSP() {
                 >
                   {!isEven && (
                     <div className="px-10 py-8">
-                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#FDE68B]/35 block mb-3">{label} — USP</span>
+                      <span className="text-[10px] font-black tracking-[0.4em] text-[#FDE68B]/35 block mb-3">{label} — USP</span>
                       <h3 className="font-['Bebas_Neue'] text-[clamp(32px,3.8vw,50px)] text-[#FDE68B] leading-none mb-3">{usp.title}</h3>
-                      <p className="text-[11px] font-black uppercase tracking-[0.09em] text-[#FDE68B]/35 leading-[1.9] max-w-xs">{usp.desc}</p>
+                      <p className="text-[11px] font-black tracking-[0.09em] text-[#FDE68B]/35 leading-[1.9] max-w-xs">{usp.desc}</p>
                       {isLast && (
                         <div className="mt-5 w-11 h-11 border border-[#FDE68B] flex items-center justify-center text-[#FDE68B] text-lg hover:bg-[#FDE68B] hover:text-[#181818] hover:rotate-45 transition-all duration-300 cursor-pointer">↗</div>
                       )}
@@ -85,9 +85,9 @@ export default function IdeasUSP() {
 
                   {isEven && (
                     <div className="px-10 py-8 text-right">
-                      <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#FDE68B]/35 block mb-3">{label} — USP</span>
+                      <span className="text-[10px] font-black tracking-[0.4em] text-[#FDE68B]/35 block mb-3">{label} — USP</span>
                       <h3 className="font-['Bebas_Neue'] text-[clamp(32px,3.8vw,50px)] text-[#FDE68B] leading-none mb-3">{usp.title}</h3>
-                      <p className="text-[11px] font-black uppercase tracking-[0.09em] text-[#FDE68B]/35 leading-[1.9] max-w-xs ml-auto">{usp.desc}</p>
+                      <p className="text-[11px] font-black tracking-[0.09em] text-[#FDE68B]/35 leading-[1.9] max-w-xs ml-auto">{usp.desc}</p>
                     </div>
                   )}
                 </motion.div>

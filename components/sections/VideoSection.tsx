@@ -9,7 +9,7 @@ export default function VideoSection() {
       <div className="max-w-7xl mx-auto flex flex-col items-center">
 
         <div className="text-center mb-20">
-          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block">BRAND SHOWCASE</span>
+          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">BRAND SHOWCASE</span>
           <h2 className="text-4xl md:text-6xl font-black text-[#FDE68B] tracking-tighter leading-none italic uppercase">
             Ideas Into <br /> <span className="opacity-60">Motion</span>
           </h2>
@@ -43,13 +43,13 @@ export default function VideoSection() {
           </div>
 
           {/* Brand Tag Overlay */}
-          <div className="absolute top-8 left-8 flex items-center gap-4 text-[#181818] bg-[#FDE68B] px-6 py-3 rounded-full text-[10px] font-black uppercase tracking-widest shadow-xl group-hover:scale-95 transition-transform">
+          <div className="absolute top-8 left-8 flex items-center gap-4 text-[#181818] bg-[#FDE68B] px-6 py-3 rounded-full text-[10px] font-black tracking-widest shadow-xl group-hover:scale-95 transition-transform">
             <div className="w-1.5 h-1.5 rounded-full bg-[#181818] animate-pulse" />
             Directorial Insight
           </div>
         </motion.div>
 
-        <div className="mt-16 flex flex-wrap justify-center gap-8 md:gap-16 opacity-40 uppercase font-black text-[10px] tracking-[0.3em] text-[#FDE68B]">
+        <div className="mt-16 flex flex-wrap justify-center gap-8 md:gap-16 opacity-40 font-black text-[10px] tracking-[0.3em] text-[#FDE68B]">
           <span>High Fidelity</span>
           <span>Premium Edit</span>
           <span>4K Resolution</span>

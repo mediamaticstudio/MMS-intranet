@@ -26,7 +26,7 @@ export default function GeographicStrategy() {
         {/* Left Stats Display */}
         <div className="flex-1 w-full max-w-2xl">
           <div className="mb-16">
-            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block">GLOBAL PRESENCE</span>
+            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">GLOBAL PRESENCE</span>
             <h2 className="text-4xl md:text-6xl font-bold text-[#FDE68B] tracking-tighter leading-tight">
               Target Geographical <br /> <span className="opacity-60">Strategy</span>
             </h2>
@@ -73,7 +73,7 @@ export default function GeographicStrategy() {
         <div className="w-full md:w-1/3 flex flex-col items-center justify-center p-12 bg-[#FDE68B] rounded-full border-2 border-[#FDE68B]/30 relative animate-[pulse_5s_infinite] shadow-2xl shadow-[#FDE68B]/40">
           <div className="text-center">
             <MapPin size={48} className="text-[#181818] mb-4 mx-auto animate-bounce" />
-            <h3 className="text-2xl font-bold text-[#181818] mb-2 uppercase tracking-tighter">Global Vision</h3>
+            <h3 className="text-2xl font-bold text-[#181818] mb-2 tracking-tighter">Global Vision</h3>
             <p className="text-[#181818]/60 text-sm italic font-medium leading-relaxed">
               "Aiming to be one of the global fortune companies by 2030."
             </p>

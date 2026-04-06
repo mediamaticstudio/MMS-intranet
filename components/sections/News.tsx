@@ -20,7 +20,7 @@ export default function IdeasNews() {
               Studio <br /> <span className="opacity-60">Insights</span>
             </h2>
           </div>
-          <button className="text-[#FDE68B] text-[10px] font-black uppercase tracking-widest border-b border-[#FDE68B]/20 pb-2 hover:opacity-60 transition-opacity">
+          <button className="text-[#FDE68B] text-[10px] font-black tracking-widest border-b border-[#FDE68B]/20 pb-2 hover:opacity-60 transition-opacity">
             View All Articles
           </button>
         </div>
@@ -42,14 +42,14 @@ export default function IdeasNews() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#FDE68B] via-[#FDE68B]/60 to-transparent flex flex-col justify-end p-10 translate-y-12 group-hover:translate-y-0 transition-all duration-500">
                 <div className="space-y-4">
-                  <span className="text-[#181818]/60 text-[10px] font-black uppercase tracking-widest">{item.date}</span>
+                  <span className="text-[#181818]/60 text-[10px] font-black tracking-widest">{item.date}</span>
                   <h3 className="text-2xl font-black text-[#181818] tracking-tighter leading-tight uppercase">
                     {item.title}
                   </h3>
                   <p className="text-[#181818]/60 text-[12px] font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-200">
                     {item.desc}
                   </p>
-                  <div className="flex items-center gap-4 pt-4 text-[#181818] text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-300">
+                  <div className="flex items-center gap-4 pt-4 text-[#181818] text-[10px] font-black tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-300">
                     Read More <ArrowRight size={14} />
                   </div>
                 </div>

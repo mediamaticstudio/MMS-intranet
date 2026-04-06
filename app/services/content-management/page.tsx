@@ -89,11 +89,11 @@ export default function ContentManagementPage() {
             transition={{ duration: 0.8 }}
             className="mb-12"
           >
-            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block">SERVICES / CONTENT WRITING</span>
+            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">SERVICES / CONTENT WRITING</span>
             <h1 className="text-5xl md:text-8xl font-black text-[#FDE68B] tracking-tighter leading-none italic mb-8 uppercase">
               CONTENT <br /> <span className="opacity-40">MANAGEMENT</span>
             </h1>
-            <p className="text-[#FDE68B]/70 text-[10px] font-black leading-relaxed max-w-2xl uppercase tracking-widest border-l-2 border-[#FDE68B] pl-8">
+            <p className="text-[#FDE68B]/70 text-[10px] font-black leading-relaxed max-w-2xl tracking-widest border-l-2 border-[#FDE68B] pl-8">
               We specialized in providing the best content writing service tailored to client needs. Our team of experienced writers excels in crafting high-quality, SEO friendly content, to engage social media and SEO content that will captivate your audience and drive results.
             </p>
           </motion.div>
@@ -111,8 +111,8 @@ export default function ContentManagementPage() {
             <div className="w-12 h-12 rounded-full bg-[#FDE68B] flex items-center justify-center text-[#181818] mb-6 shadow-lg shadow-[#FDE68B]/20">
               <Layout size={24} />
             </div>
-            <h3 className="text-[#FDE68B] text-xl font-black uppercase mb-4 italic">Consistency in Brand Voice & Style</h3>
-            <p className="text-[#FDE68B]/50 text-xs font-bold leading-relaxed uppercase tracking-tight">
+            <h3 className="text-[#FDE68B] text-xl font-black mb-4 italic">Consistency in Brand Voice & Style</h3>
+            <p className="text-[#FDE68B]/50 text-xs font-bold leading-relaxed tracking-tight">
               A content management ensures that all brand pages, blog posts, media follow the same brand guidelines—tone, design, and formatting—so the brand looks professional and trustworthy.
             </p>
           </motion.div>
@@ -124,8 +124,8 @@ export default function ContentManagementPage() {
             <div className="w-12 h-12 rounded-full bg-[#FDE68B] flex items-center justify-center text-[#181818] mb-6 shadow-lg shadow-[#FDE68B]/20">
               <Search size={24} />
             </div>
-            <h3 className="text-[#FDE68B] text-xl font-black uppercase mb-4 italic">SEO Optimization</h3>
-            <p className="text-[#FDE68B]/50 text-xs font-bold leading-relaxed uppercase tracking-tight">
+            <h3 className="text-[#FDE68B] text-xl font-black mb-4 italic">SEO Optimization</h3>
+            <p className="text-[#FDE68B]/50 text-xs font-bold leading-relaxed tracking-tight">
               Allow meta tags, alt text, and SEO-friendly URLs, Integrate with SEO tools and analytics which directly improves search rankings and organic traffic.
             </p>
           </motion.div>
@@ -137,8 +137,8 @@ export default function ContentManagementPage() {
             <div className="w-12 h-12 rounded-full bg-[#FDE68B] flex items-center justify-center text-[#181818] mb-6 shadow-lg shadow-[#FDE68B]/20">
               <Users size={24} />
             </div>
-            <h3 className="text-[#FDE68B] text-xl font-black uppercase mb-4 italic">Client Satisfaction</h3>
-            <p className="text-[#FDE68B]/50 text-xs font-bold leading-relaxed uppercase tracking-tight">
+            <h3 className="text-[#FDE68B] text-xl font-black mb-4 italic">Client Satisfaction</h3>
+            <p className="text-[#FDE68B]/50 text-xs font-bold leading-relaxed tracking-tight">
               We emphasize client satisfaction rather than delivery !!!
             </p>
           </motion.div>
@@ -150,7 +150,7 @@ export default function ContentManagementPage() {
       <section className="py-24 px-6 md:px-20 bg-[#181818]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16">
-            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block">PREMIUM PLANS</span>
+            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">PREMIUM PLANS</span>
             <h2 className="text-4xl md:text-6xl font-black text-[#FDE68B] tracking-tighter leading-none italic uppercase">
               MONTHLY <br /> <span className="opacity-40 italic">RETAINER</span>
             </h2>
@@ -164,26 +164,26 @@ export default function ContentManagementPage() {
                 className="p-10 rounded-[3rem] bg-[#FDE68B]/5 border border-[#FDE68B]/10 flex flex-col justify-between"
               >
                 <div>
-                  <h3 className="text-[#FDE68B] text-2xl font-black uppercase mb-2 italic">{plan.name}</h3>
-                  <p className="text-[#FDE68B]/40 text-[10px] font-bold tracking-widest uppercase mb-8">Project Code: {plan.name.toUpperCase()}</p>
+                  <h3 className="text-[#FDE68B] text-2xl font-black mb-2 italic">{plan.name}</h3>
+                  <p className="text-[#FDE68B]/40 text-[10px] font-bold tracking-widest mb-8">Project Code: {plan.name.toUpperCase()}</p>
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <span className="text-[#FDE68B]/40 text-[8px] font-black tracking-[0.3em] uppercase block mb-1">Project Cost in INR</span>
+                    <span className="text-[#FDE68B]/40 text-[8px] font-black tracking-[0.3em] block mb-1">Project Cost in INR</span>
                     <div className="flex items-baseline gap-2">
-                       <span className="text-[#FDE68B] text-3xl font-black">{plan.pricePerMonth}</span>
-                       <span className="text-[#FDE68B]/40 text-xs font-bold uppercase tracking-widest">/ Month</span>
+                      <span className="text-[#FDE68B] text-3xl font-black">{plan.pricePerMonth}</span>
+                      <span className="text-[#FDE68B]/40 text-xs font-bold tracking-widest">/ Month</span>
                     </div>
                     {pricingType === 'domestic' && (
                       <div className="mt-4 px-6 py-3 bg-[#FDE68B] text-black rounded-2xl shadow-xl border border-black/10">
-                        <span className="text-black/40 text-[8px] font-black tracking-[0.3em] uppercase block mb-0.5">Price + 18% GST</span>
+                        <span className="text-black/40 text-[8px] font-black tracking-[0.3em] block mb-0.5">Price + 18% GST</span>
                         <span className="text-black text-2xl font-black italic tracking-tighter">{plan.priceWithGst}</span>
                       </div>
                     )}
                   </div>
                   <div className="pt-4 border-t border-[#FDE68B]/10">
                     <span className="text-[#FDE68B] text-xl font-bold opacity-60 line-through decoration-[#FDE68B]">{plan.total}</span>
-                    <span className="text-[#FDE68B] text-xs font-black uppercase tracking-widest ml-3">Exclusive Offer</span>
+                    <span className="text-[#FDE68B] text-xs font-black tracking-widest ml-3">Exclusive Offer</span>
                   </div>
                 </div>
               </motion.div>
@@ -195,10 +195,10 @@ export default function ContentManagementPage() {
       {/* Pricing Table Section */}
       <section className="py-24 px-6 md:px-20 bg-[#FDE68B] text-[#181818]">
         <div className="max-w-7xl mx-auto">
-          
+
           <div className="flex flex-col md:flex-row justify-between items-center mb-16 gap-8 text-[#181818]">
             <div className="text-center md:text-left">
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-none uppercase italic">
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-none italic">
                 Writing <br /> <span className="opacity-40 italic">Packages</span>
               </h2>
             </div>
@@ -207,9 +207,9 @@ export default function ContentManagementPage() {
             <div className="bg-[#181818] p-1.5 rounded-full flex items-center gap-1 shadow-2xl">
               <button
                 onClick={() => setPricingType('domestic')}
-                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] uppercase transition-all duration-500 ${pricingType === 'domestic'
-                    ? 'bg-[#FDE68B] text-[#181818] shadow-lg scale-105'
-                    : 'text-[#FDE68B]/40 hover:text-[#FDE68B]/80'
+                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] transition-all duration-500 ${pricingType === 'domestic'
+                  ? 'bg-[#FDE68B] text-[#181818] shadow-lg scale-105'
+                  : 'text-[#FDE68B]/40 hover:text-[#FDE68B]/80'
                   }`}
               >
                 <CreditCard size={14} />
@@ -217,9 +217,9 @@ export default function ContentManagementPage() {
               </button>
               <button
                 onClick={() => setPricingType('international')}
-                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] uppercase transition-all duration-500 ${pricingType === 'international'
-                    ? 'bg-[#FDE68B] text-[#181818] shadow-lg scale-105'
-                    : 'text-[#FDE68B]/40 hover:text-[#FDE68B]/80'
+                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] transition-all duration-500 ${pricingType === 'international'
+                  ? 'bg-[#FDE68B] text-[#181818] shadow-lg scale-105'
+                  : 'text-[#FDE68B]/40 hover:text-[#FDE68B]/80'
                   }`}
               >
                 <Globe size={14} />
@@ -241,40 +241,37 @@ export default function ContentManagementPage() {
                 <table className="w-full border-collapse">
                   <thead>
                     <tr className="border-b-4 border-[#181818] text-left">
-                      <th className="sticky top-0 z-10 bg-[#FDE68B] py-6 px-4 text-[12px] font-black uppercase tracking-[0.4em] whitespace-nowrap">CONTENT WRITING PACKAGE</th>
-                      <th className="sticky top-0 z-10 bg-[#FDE68B] py-6 px-4 text-[12px] font-black uppercase tracking-[0.4em] text-center whitespace-nowrap">MAGNITUDE</th>
-                      <th className="sticky top-0 z-10 bg-[#FDE68B] py-6 px-4 text-[12px] font-black uppercase tracking-[0.4em] text-right whitespace-nowrap">
+                      <th className="sticky top-0 z-10 bg-[#FDE68B] py-6 px-4 text-[12px] font-black tracking-[0.4em] whitespace-nowrap">CONTENT WRITING PACKAGE</th>
+                      <th className="sticky top-0 z-10 bg-[#FDE68B] py-6 px-4 text-[12px] font-black tracking-[0.4em] text-center whitespace-nowrap">MAGNITUDE</th>
+                      <th className="sticky top-0 z-10 bg-[#FDE68B] py-6 px-4 text-[12px] font-black tracking-[0.4em] text-right whitespace-nowrap">
                         QUOTE - {pricingType === 'domestic' ? 'INR' : 'USD $'}
                       </th>
-                        {pricingType === 'domestic' && (
-                          <th className="sticky top-0 z-10 bg-[#FDE68B] py-6 px-4 text-[11px] font-black uppercase tracking-[0.3em] text-center whitespace-nowrap">
-                             <div className="bg-[#181818] text-[#FDE68B] py-2 px-4 rounded-lg inline-block">
-                                PRICE + 18% GST
-                             </div>
-                          </th>
-                        )}
+                      {pricingType === 'domestic' && (
+                        <th className="sticky top-0 z-10 bg-[#FDE68B] py-6 px-4 text-[11px] font-black tracking-[0.3em] text-center whitespace-nowrap">
+                          <div className="bg-[#181818] text-[#FDE68B] py-2 px-4 rounded-lg inline-block">
+                            PRICE + 18% GST
+                          </div>
+                        </th>
+                      )}
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-[#181818]/10">
                     {currentPackages.map((pkg, i) => (
-                      <tr 
-                        key={i} 
+                      <tr
+                        key={i}
                         onClick={() => setActiveRow(activeRow === i ? null : i)}
-                        className={`group cursor-pointer transition-all duration-300 ${
-                          activeRow === i 
-                            ? 'bg-[#181818] text-[#FDE68B]' 
+                        className={`group cursor-pointer transition-all duration-300 ${activeRow === i
+                            ? 'bg-[#181818] text-[#FDE68B]'
                             : 'hover:bg-[#181818]/5'
-                        }`}
+                          }`}
                       >
-                        <td className="py-6 px-4 font-black uppercase tracking-tight text-sm italic transition-transform group-hover:translate-x-2">
+                        <td className="py-6 px-4 font-black tracking-tight text-sm italic transition-transform group-hover:translate-x-2">
                           {pkg.name}
                         </td>
-                        <td className={`py-6 px-4 text-[10px] font-black uppercase tracking-widest text-center transition-colors ${
-                          activeRow === i ? 'text-[#FDE68B]' : 'text-[#181818]'
-                        }`}>
-                          <span className={`px-4 py-2 rounded-lg inline-block transition-colors ${
-                            activeRow === i ? 'bg-[#FDE68B]/10' : 'bg-[#181818]/10 group-hover:bg-[#181818]/20'
+                        <td className={`py-6 px-4 text-[10px] font-black tracking-widest text-center transition-colors ${activeRow === i ? 'text-[#FDE68B]' : 'text-[#181818]'
                           }`}>
+                          <span className={`px-4 py-2 rounded-lg inline-block transition-colors ${activeRow === i ? 'bg-[#FDE68B]/10' : 'bg-[#181818]/10 group-hover:bg-[#181818]/20'
+                            }`}>
                             {pkg.magnitude}
                           </span>
                         </td>
@@ -296,8 +293,8 @@ export default function ContentManagementPage() {
 
           <div className="mt-12 p-8 border-2 border-[#181818] rounded-3xl flex flex-col md:flex-row justify-between items-center gap-8 group cursor-pointer hover:bg-[#181818] hover:text-[#FDE68B] transition-all">
             <div className="text-center md:text-left">
-              <span className="text-[10px] font-black tracking-[0.4em] uppercase opacity-60 mb-2 block">READY TO START?</span>
-              <p className="text-3xl font-black italic uppercase tracking-tighter">Get a customized content strategy today.</p>
+              <span className="text-[10px] font-black tracking-[0.4em] opacity-60 mb-2 block">READY TO START?</span>
+              <p className="text-3xl font-black italic tracking-tighter">Get a customized content strategy today.</p>
             </div>
             <div className="w-16 h-16 rounded-full border-2 border-inherit flex items-center justify-center transform group-hover:rotate-45 transition-all">
               <ArrowRight size={32} />
@@ -310,7 +307,7 @@ export default function ContentManagementPage() {
       <section className="py-24 px-6 md:px-20 relative overflow-hidden border-t border-[#FDE68B]/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-20 items-center">
           <div className="md:w-1/2">
-            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block animate-pulse">PLATFORMS</span>
+            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block animate-pulse">PLATFORMS</span>
             <h2 className="text-4xl md:text-6xl font-black text-[#FDE68B] tracking-tighter leading-none italic mb-8 uppercase">
               SPECIFIC <br /> <span className="opacity-40 italic">AUDIENCES</span>
             </h2>
@@ -321,8 +318,8 @@ export default function ContentManagementPage() {
                 <Globe size={20} />
               </div>
               <div className="space-y-2">
-                <h4 className="text-[#FDE68B] text-lg font-black uppercase italic">SOCIAL MEDIA</h4>
-                <p className="text-[#FDE68B]/50 text-xs font-bold leading-relaxed uppercase tracking-tight">
+                <h4 className="text-[#FDE68B] text-lg font-black italic">SOCIAL MEDIA</h4>
+                <p className="text-[#FDE68B]/50 text-xs font-bold leading-relaxed tracking-tight">
                   The tone and style will vary for platforms like Instagram, Linkedin, Facebook and others.
                 </p>
               </div>
@@ -332,8 +329,8 @@ export default function ContentManagementPage() {
                 <FileText size={20} />
               </div>
               <div className="space-y-2">
-                <h4 className="text-[#FDE68B] text-lg font-black uppercase italic">SEO / Blog / Articles</h4>
-                <p className="text-[#FDE68B]/50 text-xs font-bold leading-relaxed uppercase tracking-tight">
+                <h4 className="text-[#FDE68B] text-lg font-black italic">SEO / Blog / Articles</h4>
+                <p className="text-[#FDE68B]/50 text-xs font-bold leading-relaxed tracking-tight">
                   Content on website or blogs might cater to an audience seeking in-depth research, guides, OR how-to-article
                 </p>
               </div>

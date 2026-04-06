@@ -19,11 +19,11 @@ export default function IdeasServices() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-20">
 
         <div className="md:w-1/3 sticky top-44 h-fit">
-          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block">CORE CAPABILITIES</span>
+          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">CORE CAPABILITIES</span>
           <h2 className="text-4xl md:text-7xl font-black text-[#FDE68B] tracking-tighter leading-none italic mb-8 uppercase">
             Expert <br /> <span className="opacity-40 italic">Solutions</span>
           </h2>
-          <p className="text-[#FDE68B]/50 text-[10px] font-black leading-relaxed max-w-xs uppercase tracking-widest border-l-2 border-[#FDE68B] pl-6">
+          <p className="text-[#FDE68B]/50 text-[10px] font-black leading-relaxed max-w-xs tracking-widest border-l-2 border-[#FDE68B] pl-6">
             MediaMatic Studio recognizes that every business is unique. We specialize in managing content through tailored high-end digital services.
           </p>
         </div>
@@ -39,13 +39,13 @@ export default function IdeasServices() {
                 className="group p-12 rounded-[2.5rem] bg-[#FDE68B]/5 border border-[#FDE68B]/10 hover:bg-[#FDE68B] transition-all duration-700 flex flex-col md:flex-row items-center justify-between cursor-pointer shadow-xl shadow-transparent hover:shadow-[#FDE68B]/20 mb-6"
               >
                 <div className="space-y-4 max-w-lg text-center md:text-left">
-                  <span className="text-[#FDE68B]/40 text-[9px] font-black uppercase tracking-[0.4em] group-hover:text-[#181818]/50 transition-colors">
+                  <span className="text-[#FDE68B]/40 text-[9px] font-black tracking-[0.4em] group-hover:text-[#181818]/50 transition-colors">
                     {service.category}
                   </span>
-                  <h3 className="text-2xl md:text-4xl font-black text-[#FDE68B] tracking-tighter uppercase group-hover:text-[#181818] transition-colors leading-none italic">
+                  <h3 className="text-2xl md:text-4xl font-black text-[#FDE68B] tracking-tighter group-hover:text-[#181818] transition-colors leading-none italic">
                     {service.title}
                   </h3>
-                  <p className="text-[#FDE68B]/60 text-xs font-bold uppercase tracking-tight group-hover:text-[#181818]/60 transition-colors">
+                  <p className="text-[#FDE68B]/60 text-xs font-bold tracking-tight group-hover:text-[#181818]/60 transition-colors">
                     {service.desc}
                   </p>
                 </div>

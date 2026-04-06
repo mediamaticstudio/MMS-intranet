@@ -75,11 +75,11 @@ export default function DigitalMarketingPage() {
             transition={{ duration: 1 }}
             className="md:w-2/3"
           >
-            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block">BRAND MANAGEMENT / DIGITAL MARKETING</span>
+            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">BRAND MANAGEMENT / DIGITAL MARKETING</span>
             <h1 className="text-6xl md:text-9xl font-black text-[#FDE68B] tracking-tighter leading-none italic mb-8 uppercase">
               DIGITAL <br /> <span className="opacity-40">MARKETING</span>
             </h1>
-            <p className="text-[#FDE68B]/70 text-[10px] font-black leading-relaxed max-w-2xl uppercase tracking-widest border-l-2 border-[#FDE68B] pl-8">
+            <p className="text-[#FDE68B]/70 text-[10px] font-black leading-relaxed max-w-2xl tracking-widest border-l-2 border-[#FDE68B] pl-8">
               As a part of Brand Management, Digital Marketing place a major role by providing data-driven digital marketing solutions that increase conversions, engagement, and visibility of brand.
             </p>
           </motion.div>
@@ -91,15 +91,15 @@ export default function DigitalMarketingPage() {
         <div className="max-w-7xl mx-auto space-y-32">
           <div className="flex flex-col md:flex-row gap-20">
             <div className="md:w-1/2">
-              <h2 className="text-3xl md:text-5xl font-black text-[#FDE68B] tracking-tighter uppercase italic leading-none sticky top-40 mb-12">
+              <h2 className="text-3xl md:text-5xl font-black text-[#FDE68B] tracking-tighter italic leading-none sticky top-40 mb-12">
                 WHAT WE DO <br /> <span className="opacity-40">WHY WITH MMS</span>
               </h2>
             </div>
             <div className="md:w-1/2 space-y-8">
-              <p className="text-[#FDE68B]/80 text-sm font-bold leading-relaxed uppercase tracking-widest">
+              <p className="text-[#FDE68B]/80 text-sm font-bold leading-relaxed tracking-widest">
                 Over many years of hand on industry experience and dedicated experienced team, we are committed to delivering a refined, strategic approach tailored to meet the evolving demands of our client business.
               </p>
-              <p className="text-[#FDE68B]/50 text-[11px] font-black leading-relaxed uppercase tracking-[0.2em] border-l-2 border-[#FDE68B] pl-8">
+              <p className="text-[#FDE68B]/50 text-[11px] font-black leading-relaxed tracking-[0.2em] border-l-2 border-[#FDE68B] pl-8">
                 In today's rapidly evolving digital landscape, marketing has become a pivotal force driving business success. At mms, we focus on providing efficient and impactful results by leveraging proven internet marketing strategies and techniques to help our client stay ahead of the competition.
               </p>
             </div>
@@ -118,8 +118,8 @@ export default function DigitalMarketingPage() {
             ].map((pillar, i) => (
               <div key={i} className={`group relative ${i === 6 ? 'md:col-span-2' : ''}`}>
                 <span className="text-[120px] font-black text-[#FDE68B] opacity-10 absolute -top-16 -left-8 pointer-events-none group-hover:opacity-20 transition-opacity">{pillar.id}</span>
-                <h3 className="text-[#FDE68B] text-2xl font-black uppercase italic mb-4 relative z-10">{pillar.title}</h3>
-                <p className={`text-[#FDE68B]/50 text-xs font-bold leading-relaxed uppercase tracking-tight ${i === 6 ? 'max-w-2xl' : 'max-w-sm'}`}>
+                <h3 className="text-[#FDE68B] text-2xl font-black italic mb-4 relative z-10">{pillar.title}</h3>
+                <p className={`text-[#FDE68B]/50 text-xs font-bold leading-relaxed tracking-tight ${i === 6 ? 'max-w-2xl' : 'max-w-sm'}`}>
                   {pillar.desc}
                 </p>
               </div>
@@ -132,9 +132,9 @@ export default function DigitalMarketingPage() {
       <section className="py-24 px-6 md:px-20 bg-[#FDE68B] text-[#181818]">
         <div className="max-w-7xl mx-auto">
           <div className="mb-20 text-center">
-            <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase italic mb-4 leading-none">SEO PLANS</h2>
-            <p className="text-[10px] font-black tracking-[0.5em] uppercase opacity-60">Search Engine Optimisation</p>
-          </div> 
+            <h2 className="text-5xl md:text-8xl font-black tracking-tighter italic mb-4 leading-none">SEO PLANS</h2>
+            <p className="text-[10px] font-black tracking-[0.5em] opacity-60">Search Engine Optimisation</p>
+          </div>
 
           {/* Currency Switcher - Positioned Above SEO Header */}
           <div className="flex justify-center mb-16">
@@ -146,7 +146,7 @@ export default function DigitalMarketingPage() {
             >
               <button
                 onClick={() => setPricingType('domestic')}
-                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] uppercase transition-all duration-500 ${pricingType === 'domestic'
+                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] transition-all duration-500 ${pricingType === 'domestic'
                   ? 'bg-black text-[#FDE68B] shadow-lg scale-105'
                   : 'text-black/40 hover:text-black/80'
                   }`}
@@ -156,7 +156,7 @@ export default function DigitalMarketingPage() {
               </button>
               <button
                 onClick={() => setPricingType('international')}
-                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] uppercase transition-all duration-500 ${pricingType === 'international'
+                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] transition-all duration-500 ${pricingType === 'international'
                   ? 'bg-black text-[#FDE68B] shadow-lg scale-105'
                   : 'text-black/40 hover:text-black/80'
                   }`}
@@ -181,7 +181,7 @@ export default function DigitalMarketingPage() {
               <table className="w-full border-collapse border-y-4 border-black">
                 <thead>
                   <tr className="text-left bg-black text-[#FDE68B]">
-                    <th className="py-8 px-6 text-[10px] font-black uppercase tracking-[0.3em]">Project Code</th>
+                    <th className="py-8 px-6 text-[10px] font-black tracking-[0.3em]">Project Code</th>
                     {currentSeoPlans.map((plan, i) => (
                       <th key={i} className="py-8 px-6 text-center border-l border-[#FDE68B]/20">
                         <span className="block text-2xl italic font-black uppercase">{plan.name}</span>
@@ -192,7 +192,7 @@ export default function DigitalMarketingPage() {
                         </span>
                         {pricingType === 'domestic' && (plan as any).priceWithGst && (
                           <div className="mt-4 px-4 py-2 bg-[#FDE68B] text-black rounded-xl border border-black/20 shadow-inner">
-                            <span className="block text-[8px] font-black uppercase tracking-[0.2em] opacity-40 mb-0.5">Price + 18% GST</span>
+                            <span className="block text-[8px] font-black tracking-[0.2em] opacity-40 mb-0.5">Price + 18% GST</span>
                             <span className="block text-lg font-black leading-none italic uppercase">
                               ₹{(plan as any).priceWithGst}
                             </span>
@@ -204,16 +204,15 @@ export default function DigitalMarketingPage() {
                 </thead>
                 <tbody className="divide-y divide-black/10">
                   {seoFeatures.map((feature, fIndex) => (
-                    <tr 
-                      key={fIndex} 
+                    <tr
+                      key={fIndex}
                       onClick={() => setActiveRow(activeRow === fIndex ? null : fIndex)}
-                      className={`group cursor-pointer transition-all duration-300 ${
-                        activeRow === fIndex 
-                          ? 'bg-black text-[#FDE68B]' 
+                      className={`group cursor-pointer transition-all duration-300 ${activeRow === fIndex
+                          ? 'bg-black text-[#FDE68B]'
                           : 'hover:bg-black/5'
-                      }`}
+                        }`}
                     >
-                      <td className="py-5 px-6 font-black uppercase italic text-xs tracking-tight transition-transform duration-300 group-hover:translate-x-2">
+                      <td className="py-5 px-6 font-black italic text-xs tracking-tight transition-transform duration-300 group-hover:translate-x-2">
                         {feature}
                       </td>
                       {currentSeoPlans.map((plan, pIndex) => (
@@ -247,7 +246,7 @@ export default function DigitalMarketingPage() {
             >
               <button
                 onClick={() => setPricingType('domestic')}
-                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] uppercase transition-all duration-500 ${pricingType === 'domestic'
+                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] transition-all duration-500 ${pricingType === 'domestic'
                   ? 'bg-black text-[#FDE68B] shadow-lg scale-105'
                   : 'text-black/40 hover:text-black/80'
                   }`}
@@ -257,7 +256,7 @@ export default function DigitalMarketingPage() {
               </button>
               <button
                 onClick={() => setPricingType('international')}
-                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] uppercase transition-all duration-500 ${pricingType === 'international'
+                className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] transition-all duration-500 ${pricingType === 'international'
                   ? 'bg-black text-[#FDE68B] shadow-lg scale-105'
                   : 'text-black/40 hover:text-black/80'
                   }`}
@@ -268,15 +267,15 @@ export default function DigitalMarketingPage() {
             </motion.div>
           </div>
           <div className="mb-20 text-center">
-            <h2 className="text-5xl md:text-8xl font-black tracking-tighter uppercase italic mb-4 leading-none">SMO PLANS</h2>
-            <p className="text-[10px] font-black tracking-[0.5em] uppercase opacity-60">Social Media Optimisation</p>
+            <h2 className="text-5xl md:text-8xl font-black tracking-tighter italic mb-4 leading-none">SMO PLANS</h2>
+            <p className="text-[10px] font-black tracking-[0.5em] opacity-60">Social Media Optimisation</p>
           </div>
 
           <div className="overflow-x-auto mb-20 text-[#181818]">
             <table className="w-full border-collapse border-y-4 border-black border-t-0">
               <thead>
                 <tr className="text-left bg-black text-[#FDE68B]">
-                  <th className="py-8 px-6 text-[10px] font-black uppercase tracking-[0.3em]">Platforms / Services</th>
+                  <th className="py-8 px-6 text-[10px] font-black tracking-[0.3em]">Platforms / Services</th>
                   {smoDomesticPlatforms.map((platform, i) => (
                     <th key={i} className="py-8 px-6 text-center border-l border-[#FDE68B]/20">
                       <span className="block text-[10px] italic font-black uppercase">{platform.name}{platform.name === 'Google' && pricingType === 'international' ? ' +' : ''}</span>
@@ -286,29 +285,28 @@ export default function DigitalMarketingPage() {
               </thead>
               <tbody className="divide-y divide-black/10">
                 {smoServices.map((service, sIndex) => (
-                  <tr 
+                  <tr
                     key={sIndex}
                     onClick={() => setActiveSmoRow(activeSmoRow === sIndex ? null : sIndex)}
-                    className={`group cursor-pointer transition-all duration-300 ${
-                      activeSmoRow === sIndex 
-                        ? 'bg-black text-[#FDE68B]' 
+                    className={`group cursor-pointer transition-all duration-300 ${activeSmoRow === sIndex
+                        ? 'bg-black text-[#FDE68B]'
                         : 'hover:bg-black/5'
-                    }`}
+                      }`}
                   >
-                    <td className="py-5 px-6 font-black uppercase italic text-xs tracking-tight transition-transform duration-300 group-hover:translate-x-2">
+                    <td className="py-5 px-6 font-black italic text-xs tracking-tight transition-transform duration-300 group-hover:translate-x-2">
                       {service}
                     </td>
                     {smoDomesticPlatforms.map((platform, pIndex) => (
                       <td key={pIndex} className="py-5 px-6 border-l border-black/10 text-center">
                         <span className={`${platform.features[sIndex] === "✓"
-                            ? "text-green-700 font-bold"
-                            : platform.features[sIndex] === "X"
-                              ? (activeSmoRow === sIndex ? "text-[#FDE68B]/20" : "text-red-700 opacity-20")
-                              : (activeSmoRow === sIndex ? "bg-[#FDE68B]/10 text-[#FDE68B]" : "bg-black/10 text-black px-3 py-1 rounded text-[10px] font-black uppercase")
+                          ? "text-green-700 font-bold"
+                          : platform.features[sIndex] === "X"
+                            ? (activeSmoRow === sIndex ? "text-[#FDE68B]/20" : "text-red-700 opacity-20")
+                            : (activeSmoRow === sIndex ? "bg-[#FDE68B]/10 text-[#FDE68B]" : "bg-black/10 text-black px-3 py-1 rounded text-[10px] font-black uppercase")
                           }`}>
-                            {platform.features[sIndex] === "✓" ? <Check size={18} className="mx-auto" /> :
-                              platform.features[sIndex] === "X" ? <X size={18} className="mx-auto" /> :
-                                platform.features[sIndex]}
+                          {platform.features[sIndex] === "✓" ? <Check size={18} className="mx-auto" /> :
+                            platform.features[sIndex] === "X" ? <X size={18} className="mx-auto" /> :
+                              platform.features[sIndex]}
                         </span>
                       </td>
                     ))}
@@ -322,8 +320,8 @@ export default function DigitalMarketingPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             {smoPackages.map((pkg, i) => (
               <div key={i} className="p-10 border-4 border-black rounded-[3rem] flex flex-col items-center text-center group hover:bg-black hover:text-[#FDE68B] transition-all duration-500">
-                <span className="text-[10px] font-black tracking-[0.4em] uppercase opacity-40 mb-2">{pkg.name}</span>
-                <p className="text-2xl font-black italic uppercase mb-6 tracking-tighter">{pkg.services}</p>
+                <span className="text-[10px] font-black tracking-[0.4em] opacity-40 mb-2">{pkg.name}</span>
+                <p className="text-2xl font-black italic mb-6 tracking-tighter">{pkg.services}</p>
                 <div className="w-12 h-px bg-black group-hover:bg-[#FDE68B] mb-6 opacity-20" />
                 <p className="text-4xl font-black tracking-tighter">
                   {pricingType === 'domestic' ? `₹${pkg.price}` : `$${pkg.price}`}
@@ -331,9 +329,9 @@ export default function DigitalMarketingPage() {
                 </p>
                 {pricingType === 'domestic' && (
                   <div className="mt-4 px-6 py-2 bg-black text-[#FDE68B] rounded-xl border border-[#FDE68B]/20 shadow-xl">
-                    <span className="block text-[8px] font-black uppercase tracking-[0.2em] opacity-40 mb-0.5">Price + 18% GST</span>
+                    <span className="block text-[8px] font-black tracking-[0.2em] opacity-40 mb-0.5">Price + 18% GST</span>
                     <span className="block text-lg font-black leading-none italic uppercase">
-                        ₹{(pkg as any).gst}
+                      ₹{(pkg as any).gst}
                     </span>
                     {pkg.original !== pkg.price && (
                       <span className="text-[10px] line-through opacity-30 italic block mt-1">Was ₹{pkg.original}</span>
@@ -346,7 +344,7 @@ export default function DigitalMarketingPage() {
 
           {pricingType === 'international' && (
             <div className="mt-16 text-center">
-              <p className="text-xl font-black italic uppercase tracking-tighter text-black border-2 border-black inline-block px-12 py-4 rounded-full">
+              <p className="text-xl font-black italic tracking-tighter text-black border-2 border-black inline-block px-12 py-4 rounded-full">
                 Get DIGITAL MARKETING SERVICE (SEO+SMO) @ FLAT 15% DISCOUNT
               </p>
             </div>
@@ -358,7 +356,7 @@ export default function DigitalMarketingPage() {
       <section className="py-24 px-6 md:px-20 border-t border-[#FDE68B]/10">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-20">
           <div className="md:w-1/3">
-            <h2 className="text-3xl font-black text-[#FDE68B] uppercase italic tracking-tighter">Terms & <br /> <span className="opacity-40">Guidelines</span></h2>
+            <h2 className="text-3xl font-black text-[#FDE68B] italic tracking-tighter">Terms & <br /> <span className="opacity-40">Guidelines</span></h2>
           </div>
           <div className="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
             {[
@@ -369,11 +367,11 @@ export default function DigitalMarketingPage() {
             ].map((term, i) => (
               <div key={i} className="flex gap-4 items-start border-l border-[#FDE68B]/20 pl-6 pb-6 hover:border-[#FDE68B] transition-colors">
                 <span className="text-[#FDE68B] flex-shrink-0">{term.icon}</span>
-                <p className="text-[10px] font-black uppercase tracking-widest text-[#FDE68B]/60 leading-relaxed">{term.text}</p>
+                <p className="text-[10px] font-black tracking-widest text-[#FDE68B]/60 leading-relaxed">{term.text}</p>
               </div>
             ))}
             <div className="col-span-1 sm:col-span-2 p-8 bg-[#FDE68B]/5 border border-[#FDE68B]/10 rounded-2xl">
-              <p className="text-[10px] font-black uppercase tracking-widest text-[#FDE68B] leading-relaxed">
+              <p className="text-[10px] font-black tracking-widest text-[#FDE68B] leading-relaxed">
                 <span className="opacity-40 block mb-2 font-black italic text-sm">IMPORTANT NOTICE</span>
                 {pricingType === 'domestic'
                   ? "All Meta, SEO, Google Ad’s will be based on client requirement and budget with a service charge of 20% on the ad budget."

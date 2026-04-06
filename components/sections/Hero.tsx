@@ -57,7 +57,7 @@ export default function IdeasHero() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
-            className="text-[clamp(48px,8vw,90px)] font-black text-white leading-[0.85] tracking-tighter uppercase italic"
+            className="text-[clamp(48px,8vw,90px)] font-black text-white leading-[0.85] tracking-tighter italic"
           >
             CLIENTS' <br /> <span className="text-[#CFCFCF] opacity-80">UNIQUE NEEDS</span>
           </motion.h2>
@@ -76,7 +76,7 @@ export default function IdeasHero() {
               Solutions by Managing the Client's Brand.
             </p>
 
-            <p className="text-[#FDE68B]/50 text-sm font-black mt-6 uppercase tracking-[0.2em]">
+            <p className="text-[#FDE68B]/50 text-sm font-black mt-6 tracking-[0.2em]">
               Tailoring Business Solutions for Your Brand Excellence.
             </p>
           </motion.div>

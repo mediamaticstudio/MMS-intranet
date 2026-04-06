@@ -16,7 +16,7 @@ export default function IdeasAwards() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between mb-24 gap-8">
           <div className="md:w-1/2">
-            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block">OUR JOURNEY</span>
+            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">OUR JOURNEY</span>
             <h2 className="text-4xl md:text-7xl font-black text-[#FDE68B] tracking-tighter leading-none italic uppercase">
               Milestones <br /> <span className="opacity-60">& Recognition</span>
             </h2>
@@ -52,7 +52,7 @@ export default function IdeasAwards() {
                 </span>
 
                 {/* Title */}
-                <h3 className="text-2xl md:text-3xl font-black text-[#FDE68B] tracking-tight uppercase mb-4 drop-shadow-md">
+                <h3 className="text-2xl md:text-3xl font-black text-[#FDE68B] tracking-tight mb-4 drop-shadow-md">
                   {item.title}
                 </h3>
 

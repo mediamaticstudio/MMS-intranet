@@ -11,8 +11,8 @@ export default function IdeasHeader() {
 
   const navItems = [
     { name: 'About', id: 'about' },
-    { 
-      name: 'Services', 
+    {
+      name: 'Services',
       id: 'services',
       hasDropdown: true,
       dropdownItems: [
@@ -24,7 +24,7 @@ export default function IdeasHeader() {
       ]
     },
     // { name: 'Portfolio', id: 'portfolio' },
-    // { name: 'Pricing', id: 'pricing' },
+    { name: 'Pricing', id: 'pricing' },
     // { name: 'Contact', id: 'footer' }
   ]
 
@@ -44,7 +44,7 @@ export default function IdeasHeader() {
           />
         </div>
         {/* <div className="flex flex-col">
-          <span className="text-[#FDE68B] font-black tracking-tighter text-2xl italic uppercase group-hover:text-white transition-colors duration-300">MMS.</span>
+          <span className="text-[#FDE68B] font-black tracking-tighter text-2xl italic group-hover:text-white transition-colors duration-300">MMS.</span>
           <span className="text-[7px] text-[#FDE68B]/40 font-bold tracking-[0.3em] -mt-1 group-hover:text-[#FDE68B]/80 transition-colors">STUDIO</span>
         </div> */}
       </Link>
@@ -52,15 +52,15 @@ export default function IdeasHeader() {
       {/* Navigation */}
       <nav className="hidden md:flex items-center gap-10">
         {navItems.map((item) => (
-          <div 
-            key={item.id} 
+          <div
+            key={item.id}
             className="relative group"
             onMouseEnter={() => item.hasDropdown && setIsServicesOpen(true)}
             onMouseLeave={() => item.hasDropdown && setIsServicesOpen(false)}
           >
             <Link
-              href={item.hasDropdown ? '#services' : `/#${item.id}`}
-              className="text-[10px] font-black tracking-[0.4em] text-[#FDE68B] hover:opacity-60 transition-all uppercase flex items-center gap-1"
+              href={item.id === 'pricing' ? '/pricing' : (item.hasDropdown ? '#services' : `/#${item.id}`)}
+              className="text-[10px] font-black tracking-[0.4em] text-[#FDE68B] hover:opacity-60 transition-all flex items-center gap-1"
             >
               {item.name}
               {item.hasDropdown && <ChevronDown size={10} className={`transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />}
@@ -80,8 +80,8 @@ export default function IdeasHeader() {
                     <div className="absolute top-0 left-0 w-full h-1 bg-[#FDE68B]" />
                     <div className="space-y-1">
                       {item.dropdownItems?.map((subItem, idx) => (
-                        <Link 
-                          key={idx} 
+                        <Link
+                          key={idx}
                           href={subItem.href}
                           className="flex items-center gap-4 p-3 rounded-xl hover:bg-[#FDE68B] group/item transition-all"
                         >
@@ -89,10 +89,10 @@ export default function IdeasHeader() {
                             {subItem.icon}
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-[10px] font-black text-[#FDE68B] uppercase tracking-widest group-hover/item:text-[#181818] transition-colors">
+                            <span className="text-[10px] font-black text-[#FDE68B] tracking-widest group-hover/item:text-[#181818] transition-colors">
                               {subItem.name}
                             </span>
-                            <span className="text-[8px] font-bold text-[#FDE68B]/40 uppercase tracking-tighter group-hover/item:text-[#181818]/60 transition-colors">
+                            <span className="text-[8px] font-bold text-[#FDE68B]/40 tracking-tighter group-hover/item:text-[#181818]/60 transition-colors">
                               {subItem.desc}
                             </span>
                           </div>

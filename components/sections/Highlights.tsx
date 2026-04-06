@@ -41,10 +41,10 @@ export default function ProjectHighlights() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          {/* <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-3 block opacity-60">
+          {/* <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-3 block opacity-60">
             Project Highlights
           </span> */}
-          <h2 className="text-4xl md:text-5xl font-black text-[#FDE68B] tracking-tighter uppercase italic leading-none">
+          <h2 className="text-4xl md:text-5xl font-black text-[#FDE68B] tracking-tighter italic leading-none">
             Project Highlights
           </h2>
         </div>
@@ -78,7 +78,7 @@ export default function ProjectHighlights() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-white text-lg font-black leading-tight tracking-tight uppercase italic group-hover:text-[#FDE68B] transition-colors">
+                <h3 className="text-white text-lg font-black leading-tight tracking-tight italic group-hover:text-[#FDE68B] transition-colors">
                   {item.title}
                 </h3>
 

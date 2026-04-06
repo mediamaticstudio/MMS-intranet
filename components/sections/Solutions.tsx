@@ -17,7 +17,7 @@ export default function IdeasSolutions() {
       <section id="solutions" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#FDE68B]/5">
          <div className="max-w-7xl mx-auto">
             <div className="mb-20 text-center">
-               <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block">TAILORED SOLUTIONS</span>
+               <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">TAILORED SOLUTIONS</span>
                <h2 className="text-4xl md:text-6xl font-black text-[#FDE68B] tracking-tighter leading-none italic uppercase">
                   Industry <br /> <span className="opacity-60">Architectures</span>
                </h2>
@@ -37,11 +37,11 @@ export default function IdeasSolutions() {
                         <div className="w-14 h-14 rounded-2xl bg-[#FDE68B] flex items-center justify-center text-[#181818] shadow-lg shadow-[#FDE68B]/20 group-hover:scale-110 transition-transform">
                            {item.icon}
                         </div>
-                        <h3 className="text-2xl font-black text-[#FDE68B] tracking-tight uppercase leading-none">
+                        <h3 className="text-2xl font-black text-[#FDE68B] tracking-tight leading-none">
                            {item.title}
                         </h3>
                      </div>
-                     <p className="text-[#FDE68B]/50 text-sm font-medium leading-relaxed uppercase tracking-widest mt-8">
+                     <p className="text-[#FDE68B]/50 text-sm font-medium leading-relaxed tracking-widest mt-8">
                         {item.desc}
                      </p>
                   </motion.div>

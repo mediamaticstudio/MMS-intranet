@@ -24,12 +24,12 @@ export default function IdeasFooter() {
                         />
                      </div>
                      <div className="flex flex-col">
-                        <span className="text-[#FDE68B] font-black tracking-tighter text-2xl italic uppercase group-hover:text-white transition-all">MMS.</span>
+                        <span className="text-[#FDE68B] font-black tracking-tighter text-2xl italic group-hover:text-white transition-all">MMS.</span>
                         <span className="text-[7px] text-[#FDE68B]/40 font-bold tracking-[0.3em] -mt-1 group-hover:text-[#FDE68B]/80 transition-all">EST. 2024</span>
                      </div>
                   </div>
                </Link>
-               <p className="text-[#FDE68B]/60 text-sm leading-relaxed max-w-xs uppercase font-bold tracking-tight">
+               <p className="text-[#FDE68B]/60 text-sm leading-relaxed max-w-xs font-bold tracking-tight">
                   Aiming to be one of the global fortune company by 2030. Delivering realistic, cost effective & high-quality services.
                </p>
                <div className="flex gap-4">
@@ -53,7 +53,7 @@ export default function IdeasFooter() {
             {/* Navigation Links */}
             <div className="space-y-6">
                <h4 className="text-[10px] font-black text-[#FDE68B] tracking-[0.4em] uppercase">SERVICES</h4>
-               <ul className="space-y-3 text-xs font-bold text-[#FDE68B]/60 uppercase tracking-wider">
+               <ul className="space-y-3 text-xs font-bold text-[#FDE68B]/60 tracking-wider">
                   <li className="hover:text-[#FDE68B] cursor-pointer transition-colors">2D/3D Animation</li>
                   <li className="hover:text-[#FDE68B] cursor-pointer transition-colors">App Development</li>
                   <li className="hover:text-[#FDE68B] cursor-pointer transition-colors">Web Design</li>
@@ -64,10 +64,10 @@ export default function IdeasFooter() {
 
             <div className="space-y-6">
                <h4 className="text-[10px] font-black text-[#FDE68B] tracking-[0.4em] uppercase">COMPANY</h4>
-               <ul className="space-y-3 text-xs font-bold text-[#FDE68B]/60 uppercase tracking-wider">
+               <ul className="space-y-3 text-xs font-bold text-[#FDE68B]/60 tracking-wider">
                   <li className="hover:text-[#FDE68B] cursor-pointer transition-colors">Our Story</li>
                   <li className="hover:text-[#FDE68B] cursor-pointer transition-colors">Portfolio</li>
-                  <li className="hover:text-[#FDE68B] cursor-pointer transition-colors">Pricing</li>
+                  <li className="hover:text-[#FDE68B] cursor-pointer transition-colors"><Link href="/pricing" className="w-full h-full block">Pricing</Link></li>
                   <li className="hover:text-[#FDE68B] cursor-pointer transition-colors">Awards</li>
                   <li className="hover:text-[#FDE68B] cursor-pointer transition-colors">Contact</li>
                </ul>
@@ -75,7 +75,7 @@ export default function IdeasFooter() {
 
             <div className="space-y-6">
                <h4 className="text-[10px] font-black text-[#FDE68B] tracking-[0.4em] uppercase">CONTACT</h4>
-               <ul className="space-y-4 text-xs font-bold text-[#FDE68B]/60 uppercase tracking-widest">
+               <ul className="space-y-4 text-xs font-bold text-[#FDE68B]/60 tracking-widest">
                   <li>MMS-5, Corporate Plaza<br />info@mediamaticstudio.com</li>
                   <li className="text-[#FDE68B] font-black">24/7 SUPPORT AVAILABLE</li>
                   <li className="flex items-center gap-2">

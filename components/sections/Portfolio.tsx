@@ -43,15 +43,15 @@ export default function IdeasPortfolio() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#FDE68B] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
-                <span className="text-[#181818]/60 text-[10px] font-black tracking-widest uppercase mb-2">
+                <span className="text-[#181818]/60 text-[10px] font-black tracking-widest mb-2">
                   {item.category}
                 </span>
-                <h3 className="text-2xl font-black text-[#181818] tracking-tighter uppercase mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-2xl font-black text-[#181818] tracking-tighter mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   {item.title}
                 </h3>
                 <div className="flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
                   {item.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 rounded-full bg-[#181818]/10 border border-[#181818]/20 text-[#181818] text-[9px] font-bold uppercase tracking-tight">
+                    <span key={tag} className="px-3 py-1 rounded-full bg-[#181818]/10 border border-[#181818]/20 text-[#181818] text-[9px] font-bold tracking-tight">
                       {tag}
                     </span>
                   ))}

@@ -38,7 +38,7 @@ export default function AboutMMS() {
             </div>
             <div className="space-y-2">
               <h3 className="text-sm font-bold text-[#FDE68B] tracking-tight uppercase">Our Commitment</h3>
-              <p className="text-[#FDE68B]/40 text-[10px] font-black leading-relaxed uppercase tracking-widest">
+              <p className="text-[#FDE68B]/40 text-[10px] font-black leading-relaxed tracking-widest">
                 Delivering realistic, cost-effective & high-quality services tailored per client's needs.
               </p>
             </div>
@@ -46,7 +46,7 @@ export default function AboutMMS() {
         </div>
 
         {/* Services Label */}
-        <span className="text-[#FDE68B]/35 text-[10px] font-black tracking-[0.4em] uppercase mb-0 block">What We Do</span>
+        <span className="text-[#FDE68B]/35 text-[10px] font-black tracking-[0.4em] mb-0 block">What We Do</span>
 
         {/* Service Rows */}
         <ul>
@@ -69,10 +69,10 @@ export default function AboutMMS() {
 
               {/* Text */}
               <div className="relative z-10">
-                <p className="text-[13px] font-black uppercase tracking-[0.08em] text-[#FDE68B] mb-1 group-hover:tracking-[0.12em] transition-all duration-300">
+                <p className="text-[13px] font-black tracking-[0.08em] text-[#FDE68B] mb-1 group-hover:tracking-[0.12em] transition-all duration-300">
                   {service.title}
                 </p>
-                <p className="text-[10px] font-normal uppercase tracking-[0.1em] text-[#FDE68B]/30 group-hover:text-[#FDE68B]/55 leading-relaxed transition-colors duration-350">
+                <p className="text-[10px] font-normal tracking-[0.1em] text-[#FDE68B]/30 group-hover:text-[#FDE68B]/55 leading-relaxed transition-colors duration-350">
                   {service.desc}
                 </p>
               </div>

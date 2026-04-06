@@ -32,7 +32,7 @@ export default function IdeasPricing() {
     <section id="pricing" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#FDE68B]/5">
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center">
-          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase mb-4 block">INVEST IN GROWTH</span>
+          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">INVEST IN GROWTH</span>
           <h2 className="text-4xl md:text-6xl font-black text-[#FDE68B] tracking-tighter leading-none italic uppercase">
             Tiered <br /> <span className="opacity-60">Architectures</span>
           </h2>
@@ -55,7 +55,7 @@ export default function IdeasPricing() {
                 </div>
                 <div className="mb-8">
                   <span className="text-5xl md:text-6xl font-black tracking-tighter">{plan.price}</span>
-                  <span className="text-xs uppercase opacity-60 ml-2">/ per project</span>
+                  <span className="text-xs opacity-60 ml-2">/ per project</span>
                 </div>
                 <ul className="space-y-4 mb-12">
                   {plan.features.map(feature => (
@@ -66,7 +66,7 @@ export default function IdeasPricing() {
                   ))}
                 </ul>
               </div>
-              <button className={`w-full py-6 rounded-full font-black uppercase tracking-widest text-[10px] transition-all duration-500 ${plan.popular ? 'bg-[#181818] text-[#FDE68B] hover:bg-[#181818]/90' : 'bg-[#FDE68B] text-[#181818] hover:bg-[#FDE68B]/90 shadow-xl shadow-[#FDE68B]/20'}`}>
+              <button className={`w-full py-6 rounded-full font-black tracking-widest text-[10px] transition-all duration-500 ${plan.popular ? 'bg-[#181818] text-[#FDE68B] hover:bg-[#181818]/90' : 'bg-[#FDE68B] text-[#181818] hover:bg-[#FDE68B]/90 shadow-xl shadow-[#FDE68B]/20'}`}>
                 Get Started Now
               </button>
             </motion.div>
