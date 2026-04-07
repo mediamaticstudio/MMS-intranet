@@ -10,13 +10,20 @@ export default function ContentManagementPage() {
   const [pricingType, setPricingType] = useState<'domestic' | 'international'>('domestic')
   const [activeRow, setActiveRow] = useState<number | null>(null)
 
-  const domesticRetainers = [
+  interface RetainerPlan {
+    name: string
+    pricePerMonth: string
+    total: string
+    priceWithGst?: string
+  }
+
+  const domesticRetainers: RetainerPlan[] = [
     { name: "Start Up", pricePerMonth: "₹15,000", total: "₹30,000", priceWithGst: "₹17,700" },
     { name: "Business", pricePerMonth: "₹20,000", total: "₹40,000", priceWithGst: "₹23,600" },
     { name: "Corporate", pricePerMonth: "₹25,000", total: "₹50,000", priceWithGst: "₹29,500" }
   ]
 
-  const internationalRetainers = [
+  const internationalRetainers: RetainerPlan[] = [
     { name: "Start Up", pricePerMonth: "$250", total: "$500" },
     { name: "Business", pricePerMonth: "$400", total: "$800" },
     { name: "Corporate", pricePerMonth: "$500", total: "$1000" }

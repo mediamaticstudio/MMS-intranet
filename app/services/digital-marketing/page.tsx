@@ -11,13 +11,29 @@ export default function DigitalMarketingPage() {
   const [activeRow, setActiveRow] = useState<number | null>(null)
   const [activeSmoRow, setActiveSmoRow] = useState<number | null>(null)
 
-  const seoDomesticPlans = [
+  interface SEOPlan {
+    name: string
+    price: string
+    discount: string
+    priceWithGst?: string
+    features: (string | boolean)[]
+  }
+
+  interface SMOPackage {
+    name: string
+    services: string
+    price: string
+    original: string
+    gst?: string
+  }
+
+  const seoDomesticPlans: SEOPlan[] = [
     { name: "Start Up", price: "30,000", discount: "15,000", priceWithGst: "17,700", features: ["Upto 6 KW", "Upto 6 Pages", "Upto 6 Social Bookmarking", "Upto 6 Classified Ads", "Upto 2 Articles", false, false, false, "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", false, false, "Yes", "Yes", "Yes"] },
     { name: "Business", price: "40,000", discount: "20,000", priceWithGst: "23,600", features: ["Upto 9 KW", "Upto 9 Pages", "Upto 9 Social Bookmarking", "Upto 9 Classified Ads", "Upto 5 Articles", "Upto 3 Press Releases", false, false, "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes"] },
     { name: "Corporate", price: "50,000", discount: "25,000", priceWithGst: "29,500", features: ["Upto 12 KW", "Upto 15 Pages", "15 Social Bookmarking", "15 Classified Ads", "Upto 8 Articles", "Upto 5 Press Releases", "2 Videos", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes", "Yes"] }
   ]
 
-  const seoInternationalPlans = [
+  const seoInternationalPlans: SEOPlan[] = [
     { name: "Start-Up", price: "750", discount: "750", features: ["Upto 6 KW", "Upto 6 Pages", "Upto 6", "Upto 6", "Upto 3", "X", "X", "X", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "X", "X", "✓", "✓", "✓"] },
     { name: "Business", price: "900", discount: "900", features: ["Upto 8 KW", "Upto 8 Pages", "Upto 8", "Upto 8", "Upto 5", "Upto 3", "X", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓"] },
     { name: "Corporate", price: "1000", discount: "1000", features: ["Upto 12 KW", "Upto 15 Pages", "Upto 15", "Upto 15", "Upto 8", "Upto 5", "2 Videos", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓"] }
@@ -50,7 +66,7 @@ export default function DigitalMarketingPage() {
     "Audience Targeting", "Hashtag strategy", "Event Creation", "Promotion", "Social Media Ads"
   ]
 
-  const smoPackages = pricingType === 'domestic'
+  const smoPackages: SMOPackage[] = pricingType === 'domestic'
     ? [
       { name: "Start Up", services: "Pick Any 3", price: "15,000", original: "30,000", gst: "17,700" },
       { name: "Business", services: "Pick Any 4", price: "20,000", original: "40,000", gst: "23,600" },
@@ -187,14 +203,14 @@ export default function DigitalMarketingPage() {
                         <span className="block text-2xl italic font-black uppercase">{plan.name}</span>
                         <span className="block text-[8px] opacity-60 mt-1 uppercase">Project Cost in {pricingType === 'domestic' ? 'INR' : 'USD $'}</span>
                         <span className="block text-xl font-black">
-                          {pricingType === 'domestic' ? `₹${(plan as any).discount}` : `$${plan.price}`} / Month
+                          {pricingType === 'domestic' ? `₹${plan.discount}` : `$${plan.price}`} / Month
                           {pricingType === 'domestic' && <span className="line-through opacity-30 text-xs ml-2">₹{plan.price}</span>}
                         </span>
-                        {pricingType === 'domestic' && (plan as any).priceWithGst && (
+                        {pricingType === 'domestic' && plan.priceWithGst && (
                           <div className="mt-4 px-4 py-2 bg-[#FDE68B] text-black rounded-xl border border-black/20 shadow-inner">
                             <span className="block text-[8px] font-black tracking-[0.2em] opacity-40 mb-0.5">Price + 18% GST</span>
                             <span className="block text-lg font-black leading-none italic uppercase">
-                              ₹{(plan as any).priceWithGst}
+                              ₹{plan.priceWithGst}
                             </span>
                           </div>
                         )}
@@ -331,7 +347,7 @@ export default function DigitalMarketingPage() {
                   <div className="mt-4 px-6 py-2 bg-black text-[#FDE68B] rounded-xl border border-[#FDE68B]/20 shadow-xl">
                     <span className="block text-[8px] font-black tracking-[0.2em] opacity-40 mb-0.5">Price + 18% GST</span>
                     <span className="block text-lg font-black leading-none italic uppercase">
-                      ₹{(pkg as any).gst}
+                      ₹{pkg.gst}
                     </span>
                     {pkg.original !== pkg.price && (
                       <span className="text-[10px] line-through opacity-30 italic block mt-1">Was ₹{pkg.original}</span>

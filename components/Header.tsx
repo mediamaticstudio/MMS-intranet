@@ -19,6 +19,7 @@ export default function IdeasHeader() {
         { name: 'Content Management', href: '/services/content-management', icon: <PenTool size={14} />, desc: 'SEO & Brand Writing' },
         { name: 'Digital Marketing', href: '/services/digital-marketing', icon: <Megaphone size={14} />, desc: 'Growth & Visibility' },
         { name: 'Website Design', href: '/services/website-development', icon: <Monitor size={14} />, desc: 'Digital Architecture' },
+        { name: 'Animation Services', href: '/animation-services', icon: <Sparkles size={14} />, desc: '2D & 3D Visuals' },
         { name: 'App Development', href: '#', icon: <Smartphone size={14} />, desc: 'Custom Solutions' },
         { name: 'Web Hosting', href: '#', icon: <Globe size={14} />, desc: '99.9% Uptime' },
       ]

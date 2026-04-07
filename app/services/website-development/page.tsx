@@ -11,6 +11,23 @@ export default function WebsiteDevelopmentPage() {
    const [pricingType, setPricingType] = useState<'domestic' | 'international'>('domestic')
    const [activeRow, setActiveRow] = useState<number | null>(null)
 
+   interface WebsitePlan {
+      name: string
+      days: string
+      price: string
+      discount: string
+      priceWithGst?: string
+      features: string[]
+   }
+
+   interface UIUXService {
+      service: string
+      cost: string
+      priceWithGst?: string
+      qty: string
+      remarks: string
+   }
+
    const websiteFeatures = [
       "Maximum No. of Pages", "Banner Slider", "Maximum Business Email ID's", "Mobile / Tab & Desktop Responsive",
       "User Friendly Design", "Website Content", "Website Image Designing", "High Resolution Image Gallery",
@@ -20,7 +37,7 @@ export default function WebsiteDevelopmentPage() {
       "Payment Gateway Integration"
    ]
 
-   const staticPlans = pricingType === 'domestic'
+   const staticPlans: WebsitePlan[] = pricingType === 'domestic'
       ? [
          { name: "Plan 1", days: "10", price: "30,000", discount: "15,000", priceWithGst: "17,700", features: ["5", "3", "3", "✓", "✓", "✓", "✓", "✓", "X", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "X", "X", "X"] },
          { name: "Plan 2", days: "12", price: "35,000", discount: "17,500", priceWithGst: "20,650", features: ["8", "5", "6", "✓", "✓", "✓", "✓", "✓", "X", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "X", "X", "X"] },
@@ -33,7 +50,7 @@ export default function WebsiteDevelopmentPage() {
          { name: "Plan 4", days: "20", price: "1000", discount: "1000", features: ["15", "5", "10", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "X", "X", "X"] }
       ]
 
-   const dynamicPlans = pricingType === 'domestic'
+   const dynamicPlans: WebsitePlan[] = pricingType === 'domestic'
       ? [
          { name: "Cat A - P1", days: "12", price: "40,000", discount: "20,000", priceWithGst: "23,600", features: ["5", "3", "3", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "X", "X", "X"] },
          { name: "Cat A - P2", days: "15", price: "50,000", discount: "25,000", priceWithGst: "29,500", features: ["10", "5", "6", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓"] },
@@ -44,7 +61,7 @@ export default function WebsiteDevelopmentPage() {
          { name: "Cat A - P3", days: "20", price: "1000", discount: "1000", features: ["15", "5", "8", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓"] },
       ]
 
-   const ecommercePlans = pricingType === 'domestic'
+   const ecommercePlans: WebsitePlan[] = pricingType === 'domestic'
       ? [
          { name: "Cat B - P1", days: "20", price: "60,000", discount: "30,000", priceWithGst: "35,400", features: ["10", "5", "5", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓"] },
          { name: "Cat B - P2", days: "25", price: "75,000", discount: "37,500", priceWithGst: "44,250", features: ["20", "10", "10", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓"] }
@@ -53,7 +70,7 @@ export default function WebsiteDevelopmentPage() {
          { name: "Cat B - P2", days: "25", price: "1250", discount: "1250", features: ["20", "10", "10", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓", "✓"] }
       ]
 
-   const uiuxData = pricingType === 'domestic'
+   const uiuxData: UIUXService[] = pricingType === 'domestic'
       ? [
          { service: "Website Layout", cost: "1,500", priceWithGst: "1,770", qty: "Per Page", remarks: "-" },
          { service: "Mobile Application Design", cost: "1,500", priceWithGst: "1,770", qty: "Per Page", remarks: "-" },
@@ -300,24 +317,33 @@ export default function WebsiteDevelopmentPage() {
                      className="overflow-x-auto min-h-[600px]"
                   >
                      {activeTab === 'static' && (
-                        <table className="w-full border-collapse border-y-4 border-black">
+                        <table className="w-full border-collapse">
                            <thead>
-                              <tr className="bg-black text-[#FDE68B]">
-                                 <th className="py-8 px-6 text-left text-[10px] font-black tracking-widest">Module / Features</th>
+                              <tr className="bg-black text-[#FDE68B] sticky top-0 z-30 shadow-2xl">
+                                 <th className="py-12 px-8 text-left text-[12px] font-black tracking-widest bg-black border-b border-[#FDE68B]/10 min-w-[250px]">
+                                    <span className="opacity-60">Module / Features</span>
+                                 </th>
                                  {staticPlans.map((plan, i) => (
-                                    <th key={i} className="py-8 px-6 text-center border-l border-[#FDE68B]/10">
-                                       <span className="block text-2xl font-black italic uppercase">{plan.name}</span>
-                                       <span className="block text-[8px] opacity-40 mb-2">Total Project Cost in {pricingType === 'domestic' ? 'INR' : 'USD $'}</span>
-                                       <span className="block text-3xl font-black py-1">{pricingType === 'domestic' ? '₹' : '$'}{plan.discount}</span>
-                                       {pricingType === 'domestic' && <span className="block text-[12px] line-through opacity-30 italic font-black mb-1">₹{plan.price}</span>}
-                                       {pricingType === 'domestic' && (plan as any).priceWithGst && (
-                                          <div className="mt-4 px-4 py-2 bg-[#FDE68B] text-black rounded-xl border border-black/20 shadow-inner inline-block min-w-[140px]">
-                                             <span className="block text-[8px] font-black tracking-[0.2em] opacity-40 mb-0.5">Price + 18% GST</span>
-                                             <span className="block text-lg font-black leading-none italic uppercase">
-                                                ₹{(plan as any).priceWithGst}
+                                    <th key={i} className="py-12 px-8 text-center border-l border-[#FDE68B]/10 bg-black border-b border-[#FDE68B]/10 min-w-[250px]">
+                                       <div className="space-y-1">
+                                          <span className="block text-4xl font-black italic uppercase tracking-tighter">{plan.name}</span>
+                                          <span className="block text-[8px] font-black opacity-30 tracking-[0.2em] mb-4 uppercase">Total Project Cost in {pricingType === 'domestic' ? 'INR' : 'USD $'}</span>
+                                          <div className="py-2">
+                                             <span className="block text-5xl font-black tracking-tighter">
+                                                {pricingType === 'domestic' ? '₹' : '$'}{plan.discount}
                                              </span>
+                                             {pricingType === 'domestic' && <span className="block text-sm line-through opacity-20 italic font-black">₹{plan.price}</span>}
                                           </div>
-                                       )}
+
+                                          {pricingType === 'domestic' && plan.priceWithGst && (
+                                             <div className="mt-6 px-6 py-4 bg-[#FDE68B] text-black rounded-2xl border-4 border-black/10 shadow-2xl inline-block transform hover:scale-105 transition-transform duration-300">
+                                                <span className="block text-[9px] font-black tracking-[0.2em] opacity-40 mb-1 uppercase">Price + 18% GST</span>
+                                                <span className="block text-3xl font-black leading-none italic uppercase tracking-tighter">
+                                                   ₹{plan.priceWithGst}
+                                                </span>
+                                             </div>
+                                          )}
+                                       </div>
                                     </th>
                                  ))}
                               </tr>
@@ -328,8 +354,8 @@ export default function WebsiteDevelopmentPage() {
                                     key={fIdx}
                                     onClick={() => setActiveRow(activeRow === fIdx ? null : fIdx)}
                                     className={`group cursor-pointer transition-all duration-300 ${activeRow === fIdx
-                                          ? 'bg-black text-[#FDE68B]'
-                                          : 'hover:bg-black/5'
+                                       ? 'bg-black text-[#FDE68B]'
+                                       : 'hover:bg-black/5'
                                        }`}
                                  >
                                     <td className="py-5 px-6 font-black text-[11px] italic tracking-tight transition-transform duration-300 group-hover:translate-x-2">{feat}</td>
@@ -353,24 +379,33 @@ export default function WebsiteDevelopmentPage() {
                      )}
 
                      {activeTab === 'dynamic' && (
-                        <table className="w-full border-collapse border-y-4 border-black">
+                        <table className="w-full border-collapse">
                            <thead>
-                              <tr className="bg-black text-[#FDE68B]">
-                                 <th className="py-8 px-6 text-left text-[10px] font-black tracking-widest">Module / Features</th>
+                              <tr className="bg-black text-[#FDE68B] sticky top-0 z-30 shadow-2xl">
+                                 <th className="py-12 px-8 text-left text-[12px] font-black tracking-widest bg-black border-b border-[#FDE68B]/10 min-w-[250px]">
+                                    <span className="opacity-60">Module / Features</span>
+                                 </th>
                                  {dynamicPlans.map((plan, i) => (
-                                    <th key={i} className="py-8 px-6 text-center border-l border-[#FDE68B]/10">
-                                       <span className="block text-xl font-black italic uppercase">{plan.name}</span>
-                                       <span className="block text-[8px] opacity-40 mb-2">Total Project Cost in {pricingType === 'domestic' ? 'INR' : 'USD $'}</span>
-                                       <span className="block text-3xl font-black py-1">{pricingType === 'domestic' ? '₹' : '$'}{plan.discount}</span>
-                                       {pricingType === 'domestic' && <span className="block text-[12px] line-through opacity-30 italic font-black mb-1">₹{plan.price}</span>}
-                                       {pricingType === 'domestic' && (plan as any).priceWithGst && (
-                                          <div className="mt-4 px-4 py-2 bg-[#FDE68B] text-black rounded-xl border border-black/20 shadow-inner inline-block min-w-[140px]">
-                                             <span className="block text-[8px] font-black tracking-[0.2em] opacity-40 mb-0.5">Price + 18% GST</span>
-                                             <span className="block text-lg font-black leading-none italic uppercase">
-                                                ₹{(plan as any).priceWithGst}
+                                    <th key={i} className="py-12 px-8 text-center border-l border-[#FDE68B]/10 bg-black border-b border-[#FDE68B]/10 min-w-[250px]">
+                                       <div className="space-y-1">
+                                          <span className="block text-4xl font-black italic uppercase tracking-tighter">{plan.name}</span>
+                                          <span className="block text-[8px] font-black opacity-30 tracking-[0.2em] mb-4 uppercase">Total Project Cost in {pricingType === 'domestic' ? 'INR' : 'USD $'}</span>
+                                          <div className="py-2">
+                                             <span className="block text-5xl font-black tracking-tighter">
+                                                {pricingType === 'domestic' ? '₹' : '$'}{plan.discount}
                                              </span>
+                                             {pricingType === 'domestic' && <span className="block text-sm line-through opacity-20 italic font-black">₹{plan.price}</span>}
                                           </div>
-                                       )}
+
+                                          {pricingType === 'domestic' && plan.priceWithGst && (
+                                             <div className="mt-6 px-6 py-4 bg-[#FDE68B] text-black rounded-2xl border-4 border-black/10 shadow-2xl inline-block transform hover:scale-105 transition-transform duration-300">
+                                                <span className="block text-[9px] font-black tracking-[0.2em] opacity-40 mb-1 uppercase">Price + 18% GST</span>
+                                                <span className="block text-3xl font-black leading-none italic uppercase tracking-tighter">
+                                                   ₹{plan.priceWithGst}
+                                                </span>
+                                             </div>
+                                          )}
+                                       </div>
                                     </th>
                                  ))}
                               </tr>
@@ -381,8 +416,8 @@ export default function WebsiteDevelopmentPage() {
                                     key={fIdx}
                                     onClick={() => setActiveRow(activeRow === fIdx ? null : fIdx)}
                                     className={`group cursor-pointer transition-all duration-300 ${activeRow === fIdx
-                                          ? 'bg-black text-[#FDE68B]'
-                                          : 'hover:bg-black/5'
+                                       ? 'bg-black text-[#FDE68B]'
+                                       : 'hover:bg-black/5'
                                        }`}
                                  >
                                     <td className="py-5 px-6 font-black text-[11px] italic tracking-tight transition-transform duration-300 group-hover:translate-x-2">{feat}</td>
@@ -405,24 +440,33 @@ export default function WebsiteDevelopmentPage() {
                         </table>
                      )}
                      {activeTab === 'ecommerce' && (
-                        <table className="w-full border-collapse border-y-4 border-black">
+                        <table className="w-full border-collapse">
                            <thead>
-                              <tr className="bg-black text-[#FDE68B]">
-                                 <th className="py-8 px-6 text-left text-[10px] font-black tracking-widest">Module / Features</th>
+                              <tr className="bg-black text-[#FDE68B] sticky top-0 z-30 shadow-2xl">
+                                 <th className="py-12 px-8 text-left text-[12px] font-black tracking-widest bg-black border-b border-[#FDE68B]/10 min-w-[250px]">
+                                    <span className="opacity-60">Module / Features</span>
+                                 </th>
                                  {ecommercePlans.map((plan, i) => (
-                                    <th key={i} className="py-8 px-6 text-center border-l border-[#FDE68B]/10">
-                                       <span className="block text-xl font-black italic uppercase">{plan.name}</span>
-                                       <span className="block text-[8px] opacity-40 mb-2">Total Project Cost in {pricingType === 'domestic' ? 'INR' : 'USD $'}</span>
-                                       <span className="block text-3xl font-black py-1">{pricingType === 'domestic' ? '₹' : '$'}{plan.discount}</span>
-                                       {pricingType === 'domestic' && <span className="block text-[12px] line-through opacity-30 italic font-black mb-1">₹{plan.price}</span>}
-                                       {pricingType === 'domestic' && (plan as any).priceWithGst && (
-                                          <div className="mt-4 px-4 py-2 bg-[#FDE68B] text-black rounded-xl border border-black/20 shadow-inner inline-block min-w-[140px]">
-                                             <span className="block text-[8px] font-black tracking-[0.2em] opacity-40 mb-0.5">Price + 18% GST</span>
-                                             <span className="block text-lg font-black leading-none italic uppercase">
-                                                ₹{(plan as any).priceWithGst}
+                                    <th key={i} className="py-12 px-8 text-center border-l border-[#FDE68B]/10 bg-black border-b border-[#FDE68B]/10 min-w-[250px]">
+                                       <div className="space-y-1">
+                                          <span className="block text-4xl font-black italic uppercase tracking-tighter">{plan.name}</span>
+                                          <span className="block text-[8px] font-black opacity-30 tracking-[0.2em] mb-4 uppercase">Total Project Cost in {pricingType === 'domestic' ? 'INR' : 'USD $'}</span>
+                                          <div className="py-2">
+                                             <span className="block text-5xl font-black tracking-tighter">
+                                                {pricingType === 'domestic' ? '₹' : '$'}{plan.discount}
                                              </span>
+                                             {pricingType === 'domestic' && <span className="block text-sm line-through opacity-20 italic font-black">₹{plan.price}</span>}
                                           </div>
-                                       )}
+
+                                          {pricingType === 'domestic' && plan.priceWithGst && (
+                                             <div className="mt-6 px-6 py-4 bg-[#FDE68B] text-black rounded-2xl border-4 border-black/10 shadow-2xl inline-block transform hover:scale-105 transition-transform duration-300">
+                                                <span className="block text-[9px] font-black tracking-[0.2em] opacity-40 mb-1 uppercase">Price + 18% GST</span>
+                                                <span className="block text-3xl font-black leading-none italic uppercase tracking-tighter">
+                                                   ₹{plan.priceWithGst}
+                                                </span>
+                                             </div>
+                                          )}
+                                       </div>
                                     </th>
                                  ))}
                               </tr>
@@ -433,8 +477,8 @@ export default function WebsiteDevelopmentPage() {
                                     key={fIdx}
                                     onClick={() => setActiveRow(activeRow === fIdx ? null : fIdx)}
                                     className={`group cursor-pointer transition-all duration-300 ${activeRow === fIdx
-                                          ? 'bg-black text-[#FDE68B]'
-                                          : 'hover:bg-black/5'
+                                       ? 'bg-black text-[#FDE68B]'
+                                       : 'hover:bg-black/5'
                                        }`}
                                  >
                                     <td className="py-5 px-6 font-black text-[11px] italic tracking-tight transition-transform duration-300 group-hover:translate-x-2">{feat}</td>
@@ -481,7 +525,7 @@ export default function WebsiteDevelopmentPage() {
                                           <td className="py-5 px-6 border-l border-black/10 text-center">
                                              <div className="bg-black/5 text-black px-4 py-1.5 rounded-lg border border-black/5 inline-block min-w-[100px]">
                                                 <span className="block text-[7px] font-black opacity-40 tracking-widest leading-none mb-1">Cost + 18% GST</span>
-                                                <span className="block font-black text-lg italic tracking-tighter shrink-0">₹{(item as any).priceWithGst}</span>
+                                                <span className="block font-black text-lg italic tracking-tighter shrink-0">₹{item.priceWithGst}</span>
                                              </div>
                                           </td>
                                        )}
