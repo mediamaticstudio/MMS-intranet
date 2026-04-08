@@ -17,10 +17,10 @@ import ProjectWorkflow from "@/components/sections/Workflow";
 
 export default function AboutPage() {
   return (
-    <main className="relative overflow-x-hidden min-h-screen bg-[#181818] selection:bg-[#FDE68B] selection:text-[#181818]">
+    <main className="relative overflow-x-hidden min-h-screen bg-[#181818] selection:bg-[#DBE3E9] selection:text-[#181818]">
       {/* Global Background Textures */}
       <div className="fixed inset-0 z-0 pointer-events-none opacity-5">
-        <div 
+        <div
           className="absolute inset-0"
           style={{
             backgroundImage: "url('/back drop.png')",
@@ -31,7 +31,7 @@ export default function AboutPage() {
         />
       </div>
       <div className="fixed inset-0 z-0 pointer-events-none opacity-[0.02]">
-        <div 
+        <div
           className="absolute top-0 right-0 w-[1000px] h-[1000px] rotate-45 translate-x-1/3 -translate-y-1/3"
           style={{
             backgroundImage: "url('/bg doodle.png')",
@@ -39,7 +39,7 @@ export default function AboutPage() {
             backgroundRepeat: 'no-repeat'
           }}
         />
-        <div 
+        <div
           className="absolute bottom-0 left-0 w-[800px] h-[800px] -rotate-12 -translate-x-1/4 translate-y-1/4"
           style={{
             backgroundImage: "url('/bg doodle.png')",
@@ -72,3 +72,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

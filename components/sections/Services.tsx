@@ -15,15 +15,15 @@ const services = [
 
 export default function IdeasServices() {
   return (
-    <section id="services" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#FDE68B]/5 overflow-hidden">
+    <section id="services" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#DBE3E9]/5 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-20">
 
         <div className="md:w-1/3 sticky top-44 h-fit">
-          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">CORE CAPABILITIES</span>
-          <h2 className="text-4xl md:text-7xl font-black text-[#FDE68B] tracking-tighter leading-none italic mb-8 uppercase">
+          <span className="text-[#DBE3E9] text-[10px] font-normal tracking-[0.4em] mb-4 block">CORE CAPABILITIES</span>
+          <h2 className="text-4xl md:text-7xl font-normal text-[#DBE3E9] tracking-tighter leading-none italic mb-8 uppercase">
             Expert <br /> <span className="opacity-40 italic">Solutions</span>
           </h2>
-          <p className="text-[#FDE68B]/50 text-[10px] font-black leading-relaxed max-w-xs tracking-widest border-l-2 border-[#FDE68B] pl-6">
+          <p className="text-[#DBE3E9]/50 text-[10px] font-normal leading-relaxed max-w-xs tracking-widest border-l-2 border-[#DBE3E9] pl-6">
             MediaMatic Studio recognizes that every business is unique. We specialize in managing content through tailored high-end digital services.
           </p>
         </div>
@@ -36,20 +36,20 @@ export default function IdeasServices() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, ease: "circOut", delay: index * 0.1 }}
-                className="group p-12 rounded-[2.5rem] bg-[#FDE68B]/5 border border-[#FDE68B]/10 hover:bg-[#FDE68B] transition-all duration-700 flex flex-col md:flex-row items-center justify-between cursor-pointer shadow-xl shadow-transparent hover:shadow-[#FDE68B]/20 mb-6"
+                className="group p-12 rounded-[2.5rem] bg-[#DBE3E9]/5 border border-[#DBE3E9]/10 hover:bg-[#DBE3E9] transition-all duration-700 flex flex-col md:flex-row items-center justify-between cursor-pointer shadow-xl shadow-transparent hover:shadow-[#DBE3E9]/20 mb-6"
               >
                 <div className="space-y-4 max-w-lg text-center md:text-left">
-                  <span className="text-[#FDE68B]/40 text-[9px] font-black tracking-[0.4em] group-hover:text-[#181818]/50 transition-colors">
+                  <span className="text-[#DBE3E9]/40 text-[9px] font-normal tracking-[0.4em] group-hover:text-[#181818]/50 transition-colors">
                     {service.category}
                   </span>
-                  <h3 className="text-2xl md:text-4xl font-black text-[#FDE68B] tracking-tighter group-hover:text-[#181818] transition-colors leading-none italic">
+                  <h3 className="text-2xl md:text-4xl font-normal text-[#DBE3E9] tracking-tighter group-hover:text-[#181818] transition-colors leading-none italic">
                     {service.title}
                   </h3>
-                  <p className="text-[#FDE68B]/60 text-xs font-bold tracking-tight group-hover:text-[#181818]/60 transition-colors">
+                  <p className="text-[#DBE3E9]/60 text-xs font-normal tracking-tight group-hover:text-[#181818]/60 transition-colors">
                     {service.desc}
                   </p>
                 </div>
-                <div className="mt-8 md:mt-0 w-16 h-16 rounded-full border-2 border-[#FDE68B]/10 flex items-center justify-center text-[#FDE68B] group-hover:bg-[#181818] group-hover:text-[#FDE68B] transition-all transform group-hover:rotate-45">
+                <div className="mt-8 md:mt-0 w-16 h-16 rounded-full border-2 border-[#DBE3E9]/10 flex items-center justify-center text-[#DBE3E9] group-hover:bg-[#181818] group-hover:text-[#DBE3E9] transition-all transform group-hover:rotate-45">
                   <ArrowRight size={32} />
                 </div>
               </motion.div>
@@ -61,3 +61,4 @@ export default function IdeasServices() {
     </section>
   )
 }
+

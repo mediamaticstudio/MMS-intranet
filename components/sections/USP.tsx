@@ -14,13 +14,13 @@ const usps = [
 ]
 
 const patterns = [
-  <pattern id="p0" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="rgba(253,230,139,0.22)" /></pattern>,
-  <pattern id="p1" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><line x1="0" y1="10" x2="10" y2="0" stroke="rgba(253,230,139,0.18)" strokeWidth="1.2" /></pattern>,
-  <pattern id="p2" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="7" height="7" fill="rgba(253,230,139,0.12)" /><rect x="7" y="7" width="7" height="7" fill="rgba(253,230,139,0.06)" /></pattern>,
-  <pattern id="p3" x="0" y="0" width="9" height="9" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="9" y2="9" stroke="rgba(253,230,139,0.14)" strokeWidth="1" /><line x1="9" y1="0" x2="0" y2="9" stroke="rgba(253,230,139,0.08)" strokeWidth="1" /></pattern>,
-  <pattern id="p4" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="7.5" cy="7.5" r="3" fill="none" stroke="rgba(253,230,139,0.16)" strokeWidth="1" /></pattern>,
-  <pattern id="p5" x="0" y="0" width="18" height="9" patternUnits="userSpaceOnUse"><line x1="0" y1="4.5" x2="18" y2="4.5" stroke="rgba(253,230,139,0.15)" strokeWidth="1" /></pattern>,
-  <pattern id="p6" x="0" y="0" width="11" height="11" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="5" height="5" fill="rgba(253,230,139,0.1)" /><rect x="6" y="6" width="5" height="5" fill="rgba(253,230,139,0.17)" /></pattern>,
+  <pattern id="p0" x="0" y="0" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="rgba(106,166,218,0.22)" /></pattern>,
+  <pattern id="p1" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse"><line x1="0" y1="10" x2="10" y2="0" stroke="rgba(106,166,218,0.18)" strokeWidth="1.2" /></pattern>,
+  <pattern id="p2" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="7" height="7" fill="rgba(106,166,218,0.12)" /><rect x="7" y="7" width="7" height="7" fill="rgba(106,166,218,0.06)" /></pattern>,
+  <pattern id="p3" x="0" y="0" width="9" height="9" patternUnits="userSpaceOnUse"><line x1="0" y1="0" x2="9" y2="9" stroke="rgba(106,166,218,0.14)" strokeWidth="1" /><line x1="9" y1="0" x2="0" y2="9" stroke="rgba(106,166,218,0.08)" strokeWidth="1" /></pattern>,
+  <pattern id="p4" x="0" y="0" width="15" height="15" patternUnits="userSpaceOnUse"><circle cx="7.5" cy="7.5" r="3" fill="none" stroke="rgba(106,166,218,0.16)" strokeWidth="1" /></pattern>,
+  <pattern id="p5" x="0" y="0" width="18" height="9" patternUnits="userSpaceOnUse"><line x1="0" y1="4.5" x2="18" y2="4.5" stroke="rgba(106,166,218,0.15)" strokeWidth="1" /></pattern>,
+  <pattern id="p6" x="0" y="0" width="11" height="11" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="5" height="5" fill="rgba(106,166,218,0.1)" /><rect x="6" y="6" width="5" height="5" fill="rgba(106,166,218,0.17)" /></pattern>,
 ]
 
 function BigNum({ n, patternId }: { n: number; patternId: string }) {
@@ -34,22 +34,22 @@ function BigNum({ n, patternId }: { n: number; patternId: string }) {
         </mask>
       </defs>
       <rect x="0" y="0" width="260" height="210" fill={`url(#${patternId})`} mask={`url(#mk${n})`} />
-      <text x="130" y="185" textAnchor="middle" fontFamily="'Bebas Neue'" fontSize="190" fill="none" stroke="rgba(253,230,139,0.32)" strokeWidth="1.2">{label}</text>
-      <text x="130" y="185" textAnchor="middle" fontFamily="'Bebas Neue'" fontSize="190" fill="none" stroke="rgba(253,230,139,0.07)" strokeWidth="6">{label}</text>
+      <text x="130" y="185" textAnchor="middle" fontFamily="'Bebas Neue'" fontSize="190" fill="none" stroke="rgba(106,166,218,0.32)" strokeWidth="1.2">{label}</text>
+      <text x="130" y="185" textAnchor="middle" fontFamily="'Bebas Neue'" fontSize="190" fill="none" stroke="rgba(106,166,218,0.07)" strokeWidth="6">{label}</text>
     </svg>
   )
 }
 
 export default function IdeasUSP() {
   return (
-    <section id="our-usp" className="bg-[#181818] py-24 px-6 md:px-16 relative border-t border-[#FDE68B]/5">
+    <section id="our-usp" className="bg-[#181818] py-24 px-6 md:px-16 relative border-t border-[#DBE3E9]/5">
       <div className="max-w-5xl mx-auto">
         <div className="mb-16">
-          {/* <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-3 block">WHY CHOOSE US</span> */}
-          <h2 className="font-['Bebas_Neue'] text-[clamp(52px,6vw,88px)] leading-[.93] text-[#FDE68B]">
+          {/* <span className="text-[#DBE3E9] text-[10px] font-normal tracking-[0.4em] mb-3 block">WHY CHOOSE US</span> */}
+          <h2 className="font-['Bebas_Neue'] text-[clamp(52px,6vw,88px)] leading-[.93] text-[#DBE3E9]">
             WHY CHOOSE US
           </h2>
-          <h2 className="font-['Bebas_Neue'] text-[clamp(52px,6vw,88px)] leading-[.93] text-[#FDE68B]">
+          <h2 className="font-['Bebas_Neue'] text-[clamp(52px,6vw,88px)] leading-[.93] text-[#DBE3E9]">
             Our Unique Selling<br /><span className="opacity-50">Points (USP)</span>
           </h2>
         </div>
@@ -70,13 +70,13 @@ export default function IdeasUSP() {
                   transition={{ duration: 0.6, delay: i * 0.1 }}
                   className={`grid items-center min-h-[200px] ${isEven ? 'grid-cols-[260px_1fr]' : 'grid-cols-[1fr_260px]'}`}
                 >
-                  {!isEven && (
+                   {!isEven && (
                     <div className="px-10 py-8">
-                      <span className="text-[10px] font-black tracking-[0.4em] text-[#FDE68B]/35 block mb-3">{label} — USP</span>
-                      <h3 className="font-['Bebas_Neue'] text-[clamp(32px,3.8vw,50px)] text-[#FDE68B] leading-none mb-3">{usp.title}</h3>
-                      <p className="text-[11px] font-black tracking-[0.09em] text-[#FDE68B]/35 leading-[1.9] max-w-xs">{usp.desc}</p>
+                      <span className="text-[10px] font-normal tracking-[0.4em] text-[#DBE3E9]/35 block mb-3">{label} — USP</span>
+                      <h3 className="font-['Bebas_Neue'] text-[clamp(32px,3.8vw,50px)] text-[#DBE3E9] leading-none mb-3">{usp.title}</h3>
+                      <p className="text-[11px] font-normal tracking-[0.09em] text-[#DBE3E9]/35 leading-[1.9] max-w-xs">{usp.desc}</p>
                       {isLast && (
-                        <div className="mt-5 w-11 h-11 border border-[#FDE68B] flex items-center justify-center text-[#FDE68B] text-lg hover:bg-[#FDE68B] hover:text-[#181818] hover:rotate-45 transition-all duration-300 cursor-pointer">↗</div>
+                        <div className="mt-5 w-11 h-11 border border-[#DBE3E9] flex items-center justify-center text-[#DBE3E9] text-lg hover:bg-[#DBE3E9] hover:text-[#181818] hover:rotate-45 transition-all duration-300 cursor-pointer">↗</div>
                       )}
                     </div>
                   )}
@@ -85,15 +85,15 @@ export default function IdeasUSP() {
 
                   {isEven && (
                     <div className="px-10 py-8 text-right">
-                      <span className="text-[10px] font-black tracking-[0.4em] text-[#FDE68B]/35 block mb-3">{label} — USP</span>
-                      <h3 className="font-['Bebas_Neue'] text-[clamp(32px,3.8vw,50px)] text-[#FDE68B] leading-none mb-3">{usp.title}</h3>
-                      <p className="text-[11px] font-black tracking-[0.09em] text-[#FDE68B]/35 leading-[1.9] max-w-xs ml-auto">{usp.desc}</p>
+                      <span className="text-[10px] font-normal tracking-[0.4em] text-[#DBE3E9]/35 block mb-3">{label} — USP</span>
+                      <h3 className="font-['Bebas_Neue'] text-[clamp(32px,3.8vw,50px)] text-[#DBE3E9] leading-none mb-3">{usp.title}</h3>
+                      <p className="text-[11px] font-normal tracking-[0.09em] text-[#DBE3E9]/35 leading-[1.9] max-w-xs ml-auto">{usp.desc}</p>
                     </div>
                   )}
                 </motion.div>
 
                 {!isLast && (
-                  <div className="w-px h-8 bg-gradient-to-b from-[#FDE68B]/18 to-transparent mx-auto" />
+                  <div className="w-px h-8 bg-gradient-to-b from-[#DBE3E9]/18 to-transparent mx-auto" />
                 )}
               </div>
             )
@@ -103,3 +103,5 @@ export default function IdeasUSP() {
     </section>
   )
 }
+
+

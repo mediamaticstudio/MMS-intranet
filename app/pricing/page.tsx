@@ -285,11 +285,11 @@ export default function PricingPage() {
    const currentData = getCurrentData()
 
    return (
-      <main className="min-h-screen bg-[#181818] overflow-x-hidden selection:bg-[#FDE68B] selection:text-[#181818]">
+      <main className="min-h-screen bg-[#181818] overflow-x-hidden selection:bg-[#DBE3E9] selection:text-[#181818]">
          <Header />
 
          {/* Hero Section */}
-         <section className="pt-40 pb-20 px-6 md:px-20 relative border-b border-[#FDE68B]/10">
+         <section className="pt-40 pb-20 px-6 md:px-20 relative border-b border-[#DBE3E9]/10">
             <div className="max-w-7xl mx-auto text-center md:text-left">
                <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -297,11 +297,11 @@ export default function PricingPage() {
                   transition={{ duration: 0.8 }}
                   className="mb-12"
                >
-                  <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">PRICING PLANS</span>
-                  <h1 className="text-5xl md:text-8xl font-black text-[#FDE68B] tracking-tighter leading-none italic mb-8 uppercase">
+                  <span className="text-[#DBE3E9] text-[10px] font-normal tracking-[0.4em] mb-4 block">PRICING PLANS</span>
+                  <h1 className="text-5xl md:text-8xl font-normal text-[#DBE3E9] tracking-tighter leading-none italic mb-8 uppercase">
                      TRANSPARENT <br /> <span className="opacity-40">PRICING</span>
                   </h1>
-                  <p className="text-[#FDE68B]/70 text-[10px] font-black leading-relaxed max-w-2xl tracking-widest border-l-2 border-[#FDE68B] pl-8 mx-auto md:mx-0">
+                  <p className="text-[#DBE3E9]/70 text-[10px] font-normal leading-relaxed max-w-2xl tracking-widest border-l-2 border-[#DBE3E9] pl-8 mx-auto md:mx-0">
                      Choose the perfect plan for your business growth. We offer flexible pricing models for content management, digital marketing, website development, design, and studio services.
                   </p>
                </motion.div>
@@ -309,7 +309,7 @@ export default function PricingPage() {
          </section>
 
          {/* Tabs & Currency Toggle Section */}
-         <section className="py-12 px-6 md:px-20 sticky top-20 z-30 bg-[#181818]/80 backdrop-blur-md border-b border-[#FDE68B]/10">
+         <section className="py-12 px-6 md:px-20 sticky top-20 z-30 bg-[#181818]/80 backdrop-blur-md border-b border-[#DBE3E9]/10">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-8">
 
                {/* Service Tabs */}
@@ -331,9 +331,9 @@ export default function PricingPage() {
                            // If switching to Studio, force INR (optional, but requested for display)
                            if (tab.id === "studio") setPricingType('domestic')
                         }}
-                        className={`flex items-center gap-3 px-6 py-3 rounded-full text-[10px] font-black tracking-[0.2em] transition-all duration-300 ${activeTab === tab.id
-                              ? 'bg-[#FDE68B] text-[#181818]'
-                              : 'bg-[#FDE68B]/5 text-[#FDE68B]/60 hover:text-[#FDE68B] border border-[#FDE68B]/10'
+                        className={`flex items-center gap-3 px-6 py-3 rounded-full text-[10px] font-normal tracking-[0.2em] transition-all duration-300 ${activeTab === tab.id
+                           ? 'bg-[#DBE3E9] text-[#181818]'
+                           : 'bg-[#DBE3E9]/5 text-[#DBE3E9]/60 hover:text-[#DBE3E9] border border-[#DBE3E9]/10'
                            }`}
                      >
                         {tab.icon}
@@ -343,15 +343,15 @@ export default function PricingPage() {
                </div>
 
                {/* Currency Toggle */}
-               <div className={`bg-[#181818] p-1.5 rounded-full flex items-center gap-1 border border-[#FDE68B]/10 shadow-2xl transition-opacity duration-300 ${activeTab === 'studio' ? 'opacity-20 pointer-events-none' : 'opacity-100'}`}>
+               <div className={`bg-[#181818] p-1.5 rounded-full flex items-center gap-1 border border-[#DBE3E9]/10 shadow-2xl transition-opacity duration-300 ${activeTab === 'studio' ? 'opacity-20 pointer-events-none' : 'opacity-100'}`}>
                   <button
                      onClick={() => {
                         setPricingType('domestic')
                         setActiveRow(null)
                      }}
-                     className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] transition-all duration-500 ${pricingType === 'domestic'
-                           ? 'bg-[#FDE68B] text-[#181818] shadow-lg scale-105'
-                           : 'text-[#FDE68B]/40 hover:text-[#FDE68B]/80'
+                     className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-normal tracking-[0.2em] transition-all duration-500 ${pricingType === 'domestic'
+                        ? 'bg-[#DBE3E9] text-[#181818] shadow-lg scale-105'
+                        : 'text-[#DBE3E9]/40 hover:text-[#DBE3E9]/80'
                         }`}
                   >
                      <CreditCard size={14} />
@@ -362,9 +362,9 @@ export default function PricingPage() {
                         setPricingType('international')
                         setActiveRow(null)
                      }}
-                     className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-black tracking-[0.2em] transition-all duration-500 ${pricingType === 'international'
-                           ? 'bg-[#FDE68B] text-[#181818] shadow-lg scale-105'
-                           : 'text-[#FDE68B]/40 hover:text-[#FDE68B]/80'
+                     className={`flex items-center gap-3 px-8 py-3 rounded-full text-[10px] font-normal tracking-[0.2em] transition-all duration-500 ${pricingType === 'international'
+                        ? 'bg-[#DBE3E9] text-[#181818] shadow-lg scale-105'
+                        : 'text-[#DBE3E9]/40 hover:text-[#DBE3E9]/80'
                         }`}
                   >
                      <Globe size={14} />
@@ -375,9 +375,9 @@ export default function PricingPage() {
          </section>
 
          {/* Pricing Table Section */}
-         <section className="py-24 px-6 md:px-20 bg-[#FDE68B]/5">
+         <section className="py-24 px-6 md:px-20 bg-[#DBE3E9]/5">
             <div className="max-w-7xl mx-auto">
-               <div className="bg-[#FDE68B] rounded-[3rem] p-8 md:p-12 shadow-2xl overflow-hidden border border-white/20">
+               <div className="bg-[#DBE3E9] rounded-[3rem] p-8 md:p-12 shadow-2xl overflow-hidden border border-white/20">
                   <div className="relative">
                      <AnimatePresence mode="wait">
                         <motion.div
@@ -393,26 +393,26 @@ export default function PricingPage() {
                                  {/* Video Production Section */}
                                  <section>
                                     <div className="text-center mb-12">
-                                       <h3 className="text-4xl md:text-6xl font-black text-[#181818] italic tracking-tighter mb-4">VIDEO PRODUCTION</h3>
-                                       <p className="text-[#181818]/60 text-xs font-bold tracking-widest">Corporate | Industrial | Product | Advertising | Educational Institutes | Branding | Promotion</p>
+                                       <h3 className="text-4xl md:text-6xl font-normal text-[#181818] italic tracking-tighter mb-4">VIDEO PRODUCTION</h3>
+                                       <p className="text-[#181818]/60 text-xs font-normal tracking-widest">Corporate | Industrial | Product | Advertising | Educational Institutes | Branding | Promotion</p>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                                        {videoProduction.map((item, idx) => (
-                                          <div key={idx} className="bg-[#181818] text-[#FDE68B] p-8 rounded-[2rem] flex flex-col justify-between group hover:scale-[1.02] transition-transform duration-500">
+                                          <div key={idx} className="bg-[#181818] text-[#DBE3E9] p-8 rounded-[2rem] flex flex-col justify-between group hover:scale-[1.02] transition-transform duration-500">
                                              <div>
-                                                <h4 className="text-xl font-black italic mb-8 border-b border-[#FDE68B]/20 pb-4">{item.plan}</h4>
+                                                <h4 className="text-xl font-normal italic mb-8 border-b border-[#DBE3E9]/20 pb-4">{item.plan}</h4>
                                                 <ul className="space-y-4 mb-12">
                                                    {item.features.map((feature, fIdx) => (
-                                                      <li key={fIdx} className="text-[10px] font-bold tracking-wider flex items-start gap-3">
-                                                         <div className="w-1.5 h-1.5 rounded-full bg-[#FDE68B] mt-1 shrink-0" />
+                                                      <li key={fIdx} className="text-[10px] font-normal tracking-wider flex items-start gap-3">
+                                                         <div className="w-1.5 h-1.5 rounded-full bg-[#DBE3E9] mt-1 shrink-0" />
                                                          {feature}
                                                       </li>
                                                    ))}
                                                 </ul>
                                              </div>
-                                             <div className="bg-[#FDE68B] text-[#181818] p-6 rounded-2xl text-center">
-                                                <span className="block text-[10px] font-black tracking-widest mb-1">TOTAL QUOTE</span>
-                                                <span className="text-2xl font-black italic">Rs.{item.price} /- PER DAY</span>
+                                             <div className="bg-[#DBE3E9] text-[#181818] p-6 rounded-2xl text-center">
+                                                <span className="block text-[10px] font-normal tracking-widest mb-1">TOTAL QUOTE</span>
+                                                <span className="text-2xl font-normal italic">Rs.{item.price} /- PER DAY</span>
                                              </div>
                                           </div>
                                        ))}
@@ -422,24 +422,24 @@ export default function PricingPage() {
                                  {/* Product Photography Section */}
                                  <section>
                                     <div className="text-center mb-12">
-                                       <h3 className="text-4xl md:text-5xl font-black text-[#181818] italic tracking-tighter mb-4">PRODUCT PHOTOGRAPHY</h3>
-                                       <p className="text-[#181818]/60 text-xs font-bold tracking-widest underline decoration-2 underline-offset-8">@5 Photos / Product</p>
+                                       <h3 className="text-4xl md:text-5xl font-normal text-[#181818] italic tracking-tighter mb-4">PRODUCT PHOTOGRAPHY</h3>
+                                       <p className="text-[#181818]/60 text-xs font-normal tracking-widest underline decoration-2 underline-offset-8">@5 Photos / Product</p>
                                     </div>
                                     <div className="overflow-x-auto">
                                        <table className="w-full border-separate border-spacing-4">
                                           <thead>
                                              <tr>
-                                                <th className="bg-[#181818] text-[#FDE68B] p-8 rounded-2xl text-[12px] font-black tracking-widest text-left">No. of Products</th>
-                                                <th className="bg-[#181818]/5 text-[#181818] p-8 rounded-2xl text-[12px] font-black tracking-widest">White Background Shoot</th>
-                                                <th className="bg-[#181818]/5 text-[#181818] p-8 rounded-2xl text-[12px] font-black tracking-widest">Creative Theme Product Shoot</th>
+                                                <th className="bg-[#181818] text-[#DBE3E9] p-8 rounded-2xl text-[12px] font-normal tracking-widest text-left">No. of Products</th>
+                                                <th className="bg-[#181818]/5 text-[#181818] p-8 rounded-2xl text-[12px] font-normal tracking-widest">White Background Shoot</th>
+                                                <th className="bg-[#181818]/5 text-[#181818] p-8 rounded-2xl text-[12px] font-normal tracking-widest">Creative Theme Product Shoot</th>
                                              </tr>
                                           </thead>
                                           <tbody>
                                              {productPhotography.map((row, idx) => (
                                                 <tr key={idx}>
-                                                   <td className="bg-[#181818] text-[#FDE68B] p-8 rounded-2xl text-lg font-black italic">{row.range}</td>
-                                                   <td className="bg-white/40 text-[#181818] p-8 rounded-2xl text-center text-xl font-black italic border-b-4 border-[#181818]/10">Rs.{row.white} / Product</td>
-                                                   <td className="bg-white/40 text-[#181818] p-8 rounded-2xl text-center text-xl font-black italic border-b-4 border-[#181818]/10">Rs.{row.creative} / Product</td>
+                                                   <td className="bg-[#181818] text-[#DBE3E9] p-8 rounded-2xl text-lg font-normal italic">{row.range}</td>
+                                                   <td className="bg-white/40 text-[#181818] p-8 rounded-2xl text-center text-xl font-normal italic border-b-4 border-[#181818]/10">Rs.{row.white} / Product</td>
+                                                   <td className="bg-white/40 text-[#181818] p-8 rounded-2xl text-center text-xl font-normal italic border-b-4 border-[#181818]/10">Rs.{row.creative} / Product</td>
                                                 </tr>
                                              ))}
                                           </tbody>
@@ -450,27 +450,27 @@ export default function PricingPage() {
                                  {/* Corporate Video Reels Section */}
                                  <section>
                                     <div className="text-center mb-12">
-                                       <h3 className="text-4xl md:text-5xl font-black text-[#181818] italic tracking-tighter mb-4">CORPORATE VIDEO REELS</h3>
+                                       <h3 className="text-4xl md:text-5xl font-normal text-[#181818] italic tracking-tighter mb-4">CORPORATE VIDEO REELS</h3>
                                     </div>
                                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                                       <div className="bg-[#181818] text-[#FDE68B] p-8 rounded-3xl flex flex-col justify-center gap-6">
+                                       <div className="bg-[#181818] text-[#DBE3E9] p-8 rounded-3xl flex flex-col justify-center gap-6">
                                           {["UGC", "SOCIAL MEDIA REELS", "PRODUCT VIDEO SHOOT", "PERSONAL BRANDING VIDEO SHOOT"].map((type, i) => (
-                                             <div key={i} className="text-lg font-black italic tracking-tighter">{type}</div>
+                                             <div key={i} className="text-lg font-normal italic tracking-tighter">{type}</div>
                                           ))}
                                        </div>
                                        {videoReels.map((reel, idx) => (
                                           <div key={idx} className="bg-white/40 p-10 rounded-3xl border-b-8 border-[#181818]/10 flex flex-col justify-between group">
                                              <div>
-                                                <h4 className="bg-[#181818] text-[#FDE68B] inline-block px-4 py-1 text-[10px] font-black tracking-widest mb-8 rounded-md">{reel.type}</h4>
+                                                <h4 className="bg-[#181818] text-[#DBE3E9] inline-block px-4 py-1 text-[10px] font-normal tracking-widest mb-8 rounded-md">{reel.type}</h4>
                                                 <div className="space-y-2 mb-10">
                                                    {reel.details.map((d, di) => (
-                                                      <div key={di} className="text-xl font-black text-[#181818] italic">{d}</div>
+                                                      <div key={di} className="text-xl font-normal text-[#181818] italic">{d}</div>
                                                    ))}
                                                 </div>
                                              </div>
                                              <div className="space-y-4">
-                                                <div className="text-2xl font-black text-[#181818] italic">Rs.{reel.price} / DAY</div>
-                                                <div className="text-[10px] font-black text-[#181818]/60 tracking-widest border-t border-[#181818]/10 pt-4">Additional day shoot @ Rs.{reel.additional}/Day</div>
+                                                <div className="text-2xl font-normal text-[#181818] italic">Rs.{reel.price} / DAY</div>
+                                                <div className="text-[10px] font-normal text-[#181818]/60 tracking-widest border-t border-[#181818]/10 pt-4">Additional day shoot @ Rs.{reel.additional}/Day</div>
                                              </div>
                                           </div>
                                        ))}
@@ -480,12 +480,12 @@ export default function PricingPage() {
                                  {/* Studio Rental Cost Section */}
                                  <section>
                                     <div className="text-center mb-12">
-                                       <h3 className="text-4xl md:text-5xl font-black text-[#181818] italic tracking-tighter mb-4">STUDIO RENTAL COST</h3>
+                                       <h3 className="text-4xl md:text-5xl font-normal text-[#181818] italic tracking-tighter mb-4">STUDIO RENTAL COST</h3>
                                     </div>
                                     <div className="overflow-x-auto">
                                        <table className="w-full border-separate border-spacing-y-4">
                                           <thead>
-                                             <tr className="text-[#181818] text-[10px] font-black tracking-[0.4em]">
+                                             <tr className="text-[#181818] text-[10px] font-normal tracking-[0.4em]">
                                                 <th className="p-4 text-left">Rental Plans</th>
                                                 <th className="p-4 text-left">Description</th>
                                                 <th className="p-4">COST / Hr.</th>
@@ -495,10 +495,10 @@ export default function PricingPage() {
                                           <tbody>
                                              {studioRental.map((plan, idx) => (
                                                 <tr key={idx} className="group">
-                                                   <td className="bg-[#181818] text-[#FDE68B] p-8 rounded-l-3xl text-lg font-black italic max-w-[250px]">{plan.plan}</td>
-                                                   <td className="bg-white/40 p-8 text-[11px] font-bold text-[#181818] leading-relaxed max-w-sm">{plan.desc}</td>
-                                                   <td className="bg-white/40 p-8 text-center text-xl font-black text-[#181818] italic">{plan.hr}</td>
-                                                   <td className="bg-white/40 p-8 rounded-r-3xl text-center text-xl font-black text-[#181818] italic border-r-8 border-[#181818]/10">{plan.tenHr}</td>
+                                                   <td className="bg-[#181818] text-[#DBE3E9] p-8 rounded-l-3xl text-lg font-normal italic max-w-[250px]">{plan.plan}</td>
+                                                   <td className="bg-white/40 p-8 text-[11px] font-normal text-[#181818] leading-relaxed max-w-sm">{plan.desc}</td>
+                                                   <td className="bg-white/40 p-8 text-center text-xl font-normal text-[#181818] italic">{plan.hr}</td>
+                                                   <td className="bg-white/40 p-8 rounded-r-3xl text-center text-xl font-normal text-[#181818] italic border-r-8 border-[#181818]/10">{plan.tenHr}</td>
                                                 </tr>
                                              ))}
                                           </tbody>
@@ -511,49 +511,49 @@ export default function PricingPage() {
                                  <table className="w-full border-collapse">
                                     <thead>
                                        <tr className="border-b-4 border-[#181818] text-left">
-                                          <th className="sticky top-0 z-10 bg-[#FDE68B] py-8 px-6 text-[12px] font-black tracking-[0.4em] whitespace-nowrap text-[#181818]">
+                                          <th className="sticky top-0 z-10 bg-[#DBE3E9] py-8 px-6 text-[12px] font-normal tracking-[0.4em] whitespace-nowrap text-[#181818]">
                                              {activeTab.toUpperCase()} PACKAGE
                                           </th>
-                                          <th className="sticky top-0 z-10 bg-[#FDE68B] py-8 px-6 text-[12px] font-black tracking-[0.4em] text-center whitespace-nowrap text-[#181818]">
+                                          <th className="sticky top-0 z-10 bg-[#DBE3E9] py-8 px-6 text-[12px] font-normal tracking-[0.4em] text-center whitespace-nowrap text-[#181818]">
                                              MAGNITUDE / QUANTITY
                                           </th>
-                                          <th className="sticky top-0 z-10 bg-[#FDE68B] py-8 px-6 text-[12px] font-black tracking-[0.4em] text-right whitespace-nowrap text-[#181818]">
+                                          <th className="sticky top-0 z-10 bg-[#DBE3E9] py-8 px-6 text-[12px] font-normal tracking-[0.4em] text-right whitespace-nowrap text-[#181818]">
                                              QUOTE ({pricingType === 'domestic' ? 'INR' : 'USD'})
                                           </th>
                                           {pricingType === 'domestic' && (
-                                             <th className="sticky top-0 z-10 bg-[#FDE68B] py-8 px-6 text-[11px] font-black tracking-[0.3em] text-center whitespace-nowrap text-[#181818]">
-                                                <div className="bg-[#181818] text-[#FDE68B] py-2.5 px-5 rounded-xl inline-block">
+                                             <th className="sticky top-0 z-10 bg-[#DBE3E9] py-8 px-6 text-[11px] font-normal tracking-[0.3em] text-center whitespace-nowrap text-[#181818]">
+                                                <div className="bg-[#181818] text-[#DBE3E9] py-2.5 px-5 rounded-xl inline-block">
                                                    PRICE + 18% GST
                                                 </div>
                                              </th>
                                           )}
                                        </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-[#181818]/10 bg-[#FDE68B]">
+                                    <tbody className="divide-y divide-[#181818]/10 bg-[#DBE3E9]">
                                        {currentData.map((pkg: any, i: number) => (
                                           <tr
                                              key={i}
                                              onClick={() => setActiveRow(activeRow === i ? null : i)}
                                              className={`group cursor-pointer transition-all duration-300 ${activeRow === i
-                                                   ? 'bg-[#181818] text-[#FDE68B]'
-                                                   : 'hover:bg-[#181818]/5 text-[#181818]'
+                                                ? 'bg-[#181818] text-[#DBE3E9]'
+                                                : 'hover:bg-[#181818]/5 text-[#181818]'
                                                 }`}
                                           >
-                                             <td className="py-8 px-6 font-black tracking-tight text-sm md:text-base italic transition-transform group-hover:translate-x-2">
+                                             <td className="py-8 px-6 font-normal tracking-tight text-sm md:text-base italic transition-transform group-hover:translate-x-2">
                                                 {pkg.name}
                                              </td>
-                                             <td className={`py-8 px-6 text-[10px] font-black tracking-widest text-center transition-colors ${activeRow === i ? 'text-[#FDE68B]' : 'text-[#181818]'
+                                             <td className={`py-8 px-6 text-[10px] font-normal tracking-widest text-center transition-colors ${activeRow === i ? 'text-[#DBE3E9]' : 'text-[#181818]'
                                                 }`}>
-                                                <span className={`px-5 py-2.5 rounded-xl inline-block transition-colors ${activeRow === i ? 'bg-[#FDE68B]/10' : 'bg-[#181818]/5 group-hover:bg-[#181818]/10'
+                                                <span className={`px-5 py-2.5 rounded-xl inline-block transition-colors ${activeRow === i ? 'bg-[#DBE3E9]/10' : 'bg-[#181818]/5 group-hover:bg-[#181818]/10'
                                                    }`}>
                                                    {pkg.magnitude}
                                                 </span>
                                              </td>
-                                             <td className="py-8 px-6 font-black text-right text-lg md:text-xl">
+                                             <td className="py-8 px-6 font-normal text-right text-lg md:text-xl">
                                                 {pkg.price}
                                              </td>
                                              {pricingType === 'domestic' && (
-                                                <td className="py-8 px-6 font-black text-center text-xl md:text-2xl italic tracking-tighter">
+                                                <td className="py-8 px-6 font-normal text-center text-xl md:text-2xl italic tracking-tighter">
                                                    {pkg.priceWithGst}
                                                 </td>
                                              )}
@@ -568,30 +568,30 @@ export default function PricingPage() {
                                  <table className="w-full border-collapse">
                                     <thead>
                                        <tr className="border-b-4 border-[#181818] text-left">
-                                          <th className="sticky top-0 z-10 bg-[#FDE68B] py-8 px-6 text-[12px] font-black tracking-[0.4em] whitespace-nowrap text-[#181818]">RESOURCES</th>
-                                          <th className="sticky top-0 z-10 bg-[#FDE68B] py-8 px-6 text-[12px] font-black tracking-[0.4em] text-center whitespace-nowrap text-[#181818]">BASIC</th>
-                                          <th className="sticky top-0 z-10 bg-[#FDE68B] py-8 px-6 text-[12px] font-black tracking-[0.4em] text-center whitespace-nowrap text-[#181818]">DYNAMICS</th>
-                                          <th className="sticky top-0 z-10 bg-[#FDE68B] py-8 px-6 text-[12px] font-black tracking-[0.4em] text-center whitespace-nowrap text-[#181818]">ECOMMERCE</th>
-                                          <th className="sticky top-0 z-10 bg-[#FDE68B] py-8 px-6 text-[12px] font-black tracking-[0.4em] text-center whitespace-nowrap text-[#181818]">MMS UNLIMITED</th>
+                                          <th className="sticky top-0 z-10 bg-[#DBE3E9] py-8 px-6 text-[12px] font-normal tracking-[0.4em] whitespace-nowrap text-[#181818]">RESOURCES</th>
+                                          <th className="sticky top-0 z-10 bg-[#DBE3E9] py-8 px-6 text-[12px] font-normal tracking-[0.4em] text-center whitespace-nowrap text-[#181818]">BASIC</th>
+                                          <th className="sticky top-0 z-10 bg-[#DBE3E9] py-8 px-6 text-[12px] font-normal tracking-[0.4em] text-center whitespace-nowrap text-[#181818]">DYNAMICS</th>
+                                          <th className="sticky top-0 z-10 bg-[#DBE3E9] py-8 px-6 text-[12px] font-normal tracking-[0.4em] text-center whitespace-nowrap text-[#181818]">ECOMMERCE</th>
+                                          <th className="sticky top-0 z-10 bg-[#DBE3E9] py-8 px-6 text-[12px] font-normal tracking-[0.4em] text-center whitespace-nowrap text-[#181818]">MMS UNLIMITED</th>
                                        </tr>
                                     </thead>
-                                    <tbody className="divide-y divide-[#181818]/10 bg-[#FDE68B]">
+                                    <tbody className="divide-y divide-[#181818]/10 bg-[#DBE3E9]">
                                        {currentData.map((row: any, i: number) => (
                                           <tr
                                              key={i}
                                              onClick={() => setActiveRow(activeRow === i ? null : i)}
                                              className={`group cursor-pointer transition-all duration-300 ${activeRow === i
-                                                   ? 'bg-[#181818] text-[#FDE68B]'
-                                                   : 'hover:bg-[#181818]/5 text-[#181818]'
+                                                ? 'bg-[#181818] text-[#DBE3E9]'
+                                                : 'hover:bg-[#181818]/5 text-[#181818]'
                                                 }`}
                                           >
-                                             <td className="py-6 px-6 font-black tracking-tight text-xs md:text-sm italic transition-transform group-hover:translate-x-2">
+                                             <td className="py-6 px-6 font-normal tracking-tight text-xs md:text-sm italic transition-transform group-hover:translate-x-2">
                                                 {row.resource}
                                              </td>
-                                             <td className="py-6 px-4 text-center font-bold text-sm">{row.basic}</td>
-                                             <td className="py-6 px-4 text-center font-bold text-sm">{row.dynamics}</td>
-                                             <td className="py-6 px-4 text-center font-bold text-sm">{row.ecommerce}</td>
-                                             <td className="py-6 px-4 text-center font-black text-sm uppercase">{row.unlimited}</td>
+                                             <td className="py-6 px-4 text-center font-normal text-sm">{row.basic}</td>
+                                             <td className="py-6 px-4 text-center font-normal text-sm">{row.dynamics}</td>
+                                             <td className="py-6 px-4 text-center font-normal text-sm">{row.ecommerce}</td>
+                                             <td className="py-6 px-4 text-center font-normal text-sm uppercase">{row.unlimited}</td>
                                           </tr>
                                        ))}
                                     </tbody>
@@ -606,14 +606,14 @@ export default function PricingPage() {
                      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12 border-t-2 border-[#181818]/10 pt-12">
                         <div className="bg-[#181818]/5 p-8 rounded-3xl border border-[#181818]/5">
                            <div className="flex items-center gap-3 mb-6">
-                              <div className="w-10 h-10 rounded-full bg-[#181818] flex items-center justify-center text-[#FDE68B]">
+                              <div className="w-10 h-10 rounded-full bg-[#181818] flex items-center justify-center text-[#DBE3E9]">
                                  <Server size={20} />
                               </div>
-                              <h4 className="text-[#181818] text-xl font-black italic">Specifications</h4>
+                              <h4 className="text-[#181818] text-xl font-normal italic">Specifications</h4>
                            </div>
                            <ul className="space-y-4">
                               {hostingSpecs.map((spec, i) => (
-                                 <li key={i} className="flex items-center gap-3 text-[#181818] text-sm font-bold tracking-tight">
+                                 <li key={i} className="flex items-center gap-3 text-[#181818] text-sm font-normal tracking-tight">
                                     <CheckCircle2 size={16} className="text-[#181818]/40" />
                                     {spec}
                                  </li>
@@ -622,14 +622,14 @@ export default function PricingPage() {
                         </div>
                         <div className="bg-[#181818]/5 p-8 rounded-3xl border border-[#181818]/5">
                            <div className="flex items-center gap-3 mb-6">
-                              <div className="w-10 h-10 rounded-full bg-[#181818] flex items-center justify-center text-[#FDE68B]">
+                              <div className="w-10 h-10 rounded-full bg-[#181818] flex items-center justify-center text-[#DBE3E9]">
                                  <Shield size={20} />
                               </div>
-                              <h4 className="text-[#181818] text-xl font-black italic">Benefits</h4>
+                              <h4 className="text-[#181818] text-xl font-normal italic">Benefits</h4>
                            </div>
                            <ul className="grid grid-cols-1 gap-4">
                               {hostingBenefits.map((benefit, i) => (
-                                 <li key={i} className="flex items-center gap-3 text-[#181818] text-sm font-bold tracking-tight">
+                                 <li key={i} className="flex items-center gap-3 text-[#181818] text-sm font-normal tracking-tight">
                                     <div className="w-1.5 h-1.5 rounded-full bg-[#181818]" />
                                     {benefit}
                                  </li>
@@ -642,8 +642,8 @@ export default function PricingPage() {
                   {/* Table Footer / Info */}
                   <div className="mt-12 flex flex-col md:flex-row justify-between items-end gap-6 border-t-2 border-[#181818]/10 pt-10">
                      <div className="space-y-4">
-                        <p className="text-[#181818]/40 text-[10px] font-black tracking-[0.4em]">DISCLAIMER</p>
-                        <div className="text-[#181818] text-sm font-bold tracking-tight max-w-md space-y-1">
+                        <p className="text-[#181818]/40 text-[10px] font-normal tracking-[0.4em]">DISCLAIMER</p>
+                        <div className="text-[#181818] text-sm font-normal tracking-tight max-w-md space-y-1">
                            <p>* Prices are subject to change based on project complexity.</p>
                            <p>* GST (18%) is mandatory for all domestic transactions.</p>
                            <p>* Custom packages available on request.</p>
@@ -652,7 +652,7 @@ export default function PricingPage() {
                      <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="bg-[#181818] text-[#FDE68B] px-10 py-5 rounded-[2rem] font-black italic tracking-tighter text-lg flex items-center gap-4 group shadow-2xl"
+                        className="bg-[#181818] text-[#DBE3E9] px-10 py-5 rounded-[2rem] font-normal italic tracking-tighter text-lg flex items-center gap-4 group shadow-2xl"
                      >
                         Book Consultation
                         <ArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -664,21 +664,21 @@ export default function PricingPage() {
 
          {/* Special Offer Section */}
          <section className="py-24 px-6 md:px-20 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto rounded-[4rem] bg-[#FDE68B] p-12 md:p-24 relative overflow-hidden flex flex-col items-center text-center shadow-2xl">
+            <div className="max-w-7xl mx-auto rounded-[4rem] bg-[#DBE3E9] p-12 md:p-24 relative overflow-hidden flex flex-col items-center text-center shadow-2xl">
                <motion.div
                   initial={{ scale: 0.8, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
                   className="z-10"
                >
-                  <span className="text-[#181818] text-[12px] font-black tracking-[0.6em] mb-6 block">LAUNCH OFFER</span>
-                  <h2 className="text-6xl md:text-9xl font-black text-[#181818] tracking-tighter leading-[0.8] italic mb-12 uppercase">
+                  <span className="text-[#181818] text-[12px] font-normal tracking-[0.6em] mb-6 block">LAUNCH OFFER</span>
+                  <h2 className="text-6xl md:text-9xl font-normal text-[#181818] tracking-tighter leading-[0.8] italic mb-12 uppercase">
                      FLAT 15% <span className="opacity-40">OFF</span>
                   </h2>
-                  <p className="text-[#181818] text-xl font-bold max-w-2xl mx-auto mb-12 tracking-tight">
+                  <p className="text-[#181818] text-xl font-normal max-w-2xl mx-auto mb-12 tracking-tight">
                      Get Digital Marketing Service (SEO+SMO) @ FLAT 15% DISCOUNT for annual commitments.
                   </p>
-                  <button className="bg-[#181818] text-[#FDE68B] px-16 py-6 rounded-full text-xl font-black italic tracking-widest hover:scale-105 hover:bg-black transition-all shadow-xl">
+                  <button className="bg-[#181818] text-[#DBE3E9] px-16 py-6 rounded-full text-xl font-normal italic tracking-widest hover:scale-105 hover:bg-black transition-all shadow-xl">
                      CLAIM OFFER NOW
                   </button>
                </motion.div>
@@ -694,3 +694,5 @@ export default function PricingPage() {
       </main>
    )
 }
+
+

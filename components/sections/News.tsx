@@ -11,16 +11,16 @@ const newsItems = [
 
 export default function IdeasNews() {
   return (
-    <section id="news" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#FDE68B]/5">
+    <section id="news" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#DBE3E9]/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
           <div className="space-y-4">
-            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase">LATEST UPDATES</span>
-            <h2 className="text-4xl md:text-6xl font-black text-[#FDE68B] tracking-tighter leading-none italic uppercase">
+            <span className="text-[#DBE3E9] text-[10px] font-normal tracking-[0.4em] uppercase">LATEST UPDATES</span>
+            <h2 className="text-4xl md:text-6xl font-normal text-[#DBE3E9] tracking-tighter leading-none italic uppercase">
               Studio <br /> <span className="opacity-60">Insights</span>
             </h2>
           </div>
-          <button className="text-[#FDE68B] text-[10px] font-black tracking-widest border-b border-[#FDE68B]/20 pb-2 hover:opacity-60 transition-opacity">
+          <button className="text-[#DBE3E9] text-[10px] font-normal tracking-widest border-b border-[#DBE3E9]/20 pb-2 hover:opacity-60 transition-opacity">
             View All Articles
           </button>
         </div>
@@ -33,23 +33,23 @@ export default function IdeasNews() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative h-[500px] rounded-3xl overflow-hidden border border-[#FDE68B]/10 bg-[#FDE68B]/5 cursor-pointer"
+              className="group relative h-[500px] rounded-3xl overflow-hidden border border-[#DBE3E9]/10 bg-[#DBE3E9]/5 cursor-pointer"
             >
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110 opacity-70"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#FDE68B] via-[#FDE68B]/60 to-transparent flex flex-col justify-end p-10 translate-y-12 group-hover:translate-y-0 transition-all duration-500">
+               <div className="absolute inset-0 bg-gradient-to-t from-[#DBE3E9] via-[#DBE3E9]/60 to-transparent flex flex-col justify-end p-10 translate-y-12 group-hover:translate-y-0 transition-all duration-500">
                 <div className="space-y-4">
-                  <span className="text-[#181818]/60 text-[10px] font-black tracking-widest">{item.date}</span>
-                  <h3 className="text-2xl font-black text-[#181818] tracking-tighter leading-tight uppercase">
+                  <span className="text-[#181818]/60 text-[10px] font-normal tracking-widest">{item.date}</span>
+                  <h3 className="text-2xl font-normal text-[#181818] tracking-tighter leading-tight uppercase">
                     {item.title}
                   </h3>
-                  <p className="text-[#181818]/60 text-[12px] font-medium leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-200">
+                  <p className="text-[#181818]/60 text-[12px] font-normal leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-200">
                     {item.desc}
                   </p>
-                  <div className="flex items-center gap-4 pt-4 text-[#181818] text-[10px] font-black tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-300">
+                  <div className="flex items-center gap-4 pt-4 text-[#181818] text-[10px] font-normal tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-300">
                     Read More <ArrowRight size={14} />
                   </div>
                 </div>
@@ -61,3 +61,4 @@ export default function IdeasNews() {
     </section>
   )
 }
+

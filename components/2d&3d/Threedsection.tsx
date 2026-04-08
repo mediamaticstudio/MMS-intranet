@@ -92,20 +92,20 @@ export default function ThreeDSection() {
     return (
         <section
             id="3d-animation"
-            className="bg-[#1a1a1a] py-24 px-6 md:px-16 relative overflow-hidden border-t border-[#FDE68B]/10"
+            className="bg-[#1a1a1a] py-24 px-6 md:px-16 relative overflow-hidden border-t border-[#DBE3E9]/10"
         >
             {/* Subtle radial glow right */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#FDE68B]/4 blur-[180px] rounded-full pointer-events-none" />
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#DBE3E9]/4 blur-[180px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10">
 
                 {/* Section Header */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
                     <div className="space-y-4">
-                        <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase">
+                        <span className="text-[#DBE3E9] text-[10px] font-normal tracking-[0.4em] uppercase">
                             Depth. Realism. Impact.
                         </span>
-                        <h2 className="text-5xl md:text-7xl font-black text-[#CFCFCF] tracking-tighter leading-none italic uppercase">
+                        <h2 className="text-5xl md:text-7xl font-normal text-[#FBFBF8] tracking-tighter leading-none italic uppercase">
                             3D
                             <br />
                             <span className="opacity-40">Animation</span>
@@ -117,9 +117,9 @@ export default function ThreeDSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="flex items-center p-8 rounded-3xl bg-[#FDE68B]/5 border border-[#FDE68B]/10 self-center"
+                        className="flex items-center p-8 rounded-3xl bg-[#DBE3E9]/5 border border-[#DBE3E9]/10 self-center"
                     >
-                        <p className="text-[#FDE68B]/50 text-[13px] font-medium leading-relaxed tracking-wide">
+                        <p className="text-[#DBE3E9]/50 text-[13px] font-medium leading-relaxed tracking-wide">
                             3D animation creates depth, height, and width in a virtual space — producing
                             photorealistic or highly stylized results for film, product visualization, architecture,
                             and beyond.
@@ -128,7 +128,7 @@ export default function ThreeDSection() {
                 </div>
 
                 {/* Service List */}
-                <span className="text-[#FDE68B]/35 text-[10px] font-black tracking-[0.4em] mb-0 block">
+                <span className="text-[#DBE3E9]/35 text-[10px] font-normal tracking-[0.4em] mb-0 block">
                     3D Services
                 </span>
                 <ul>
@@ -143,17 +143,17 @@ export default function ThreeDSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="mt-20 flex flex-col md:flex-row items-center justify-between gap-6 p-10 rounded-3xl border border-[#FDE68B]/15 bg-[#FDE68B]/5"
+                    className="mt-20 flex flex-col md:flex-row items-center justify-between gap-6 p-10 rounded-3xl border border-[#DBE3E9]/15 bg-[#DBE3E9]/5"
                 >
                     <div className="space-y-2 text-center md:text-left">
-                        <p className="text-[11px] font-black tracking-[0.35em] text-[#FDE68B]/40 uppercase">
+                        <p className="text-[11px] font-normal tracking-[0.35em] text-[#DBE3E9]/40 uppercase">
                             Ready to bring your vision to life?
                         </p>
-                        <h3 className="text-2xl font-black text-[#CFCFCF] tracking-tight italic uppercase">
+                        <h3 className="text-2xl font-normal text-[#FBFBF8] tracking-tight italic uppercase">
                             Let&apos;s Create Together
                         </h3>
                     </div>
-                    <button className="px-10 py-4 bg-[#FDE68B] text-[#181818] text-[11px] font-black tracking-[0.25em] uppercase rounded-full hover:bg-[#FDE68B]/80 transition-all duration-300 hover:scale-105 active:scale-95 flex-shrink-0">
+                    <button className="px-10 py-4 bg-[#DBE3E9] text-[#181818] text-[11px] font-normal tracking-[0.25em] uppercase rounded-full hover:bg-[#DBE3E9]/80 transition-all duration-300 hover:scale-105 active:scale-95 flex-shrink-0">
                         Get In Touch →
                     </button>
                 </motion.div>
@@ -161,3 +161,5 @@ export default function ThreeDSection() {
         </section>
     )
 }
+
+

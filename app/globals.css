@@ -6,7 +6,19 @@ html {
 
 :root {
   --background: #181818;
-  --foreground: #FDE68B;
+  --foreground: #FBFBF8;
+  /* Canvas: Main Foreground/Headings */
+
+  /* Brand Palette from Design Assets */
+  --brand-canvas: #FBFBF8;
+  --brand-mist: #DBE3E9;
+  --brand-cornflower: #DBE3E9;
+  --brand-pear: #E1E5AC;
+
+  /* Semantic Mapping */
+  --primary: var(--brand-cornflower);
+  --accent: var(--brand-pear);
+  --subtle: var(--brand-mist);
 }
 
 body {

@@ -16,7 +16,7 @@ const highlights = [
 
 export default function ProjectHighlights() {
   return (
-    <section className="bg-[#181818] py-24 px-6 overflow-hidden relative border-t border-[#FDE68B]/5">
+    <section className="bg-[#181818] py-24 px-6 overflow-hidden relative border-t border-[#DBE3E9]/5">
       {/* Background Images */}
       <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div
@@ -41,16 +41,16 @@ export default function ProjectHighlights() {
 
         {/* Header */}
         <div className="text-center mb-16">
-          {/* <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-3 block opacity-60">
+          {/* <span className="text-[#DBE3E9] text-[10px] font-normal tracking-[0.4em] mb-3 block opacity-60">
             Project Highlights
           </span> */}
-          <h2 className="text-4xl md:text-5xl font-black text-[#FDE68B] tracking-tighter italic leading-none">
+          <h2 className="text-4xl md:text-5xl font-normal text-[#DBE3E9] tracking-tighter italic leading-none">
             Project Highlights
           </h2>
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#FDE68B]/10 border border-[#FDE68B]/10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-[#DBE3E9]/10 border border-[#DBE3E9]/10">
           {highlights.map((item, index) => {
             const Icon = item.icon
             return (
@@ -60,30 +60,30 @@ export default function ProjectHighlights() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: index * 0.06, ease: 'easeOut' }}
-                className="relative bg-[#181818]/80 backdrop-blur-sm p-8 flex flex-col gap-6 group cursor-default overflow-hidden border-r border-b border-[#FDE68B]/5"
+                className="relative bg-[#181818]/80 backdrop-blur-sm p-8 flex flex-col gap-6 group cursor-default overflow-hidden border-r border-b border-[#DBE3E9]/5"
               >
                 {/* Top sweep bar on hover */}
-                <div className="absolute top-0 left-0 h-[3px] bg-[#FDE68B] w-0 group-hover:w-full transition-all duration-[400ms] easy-in-out shadow-[0_0_15px_rgba(253,230,139,0.5)]" />
+                <div className="absolute top-0 left-0 h-[3px] bg-[#DBE3E9] w-0 group-hover:w-full transition-all duration-[400ms] easy-in-out shadow-[0_0_15px_rgba(106,166,218,0.5)]" />
 
                 <div className="flex justify-between items-start">
                   {/* Index label */}
-                  <span className="text-[#FDE68B] text-[10px] font-black opacity-30 italic">
+                  <span className="text-[#DBE3E9] text-[10px] font-normal opacity-30 italic">
                     {String(item.id).padStart(2, '0')}
                   </span>
 
                   {/* Icon box */}
-                  <div className="w-10 h-10 border border-[#FDE68B]/20 flex items-center justify-center flex-shrink-0 rounded-lg group-hover:bg-[#FDE68B] group-hover:text-[#181818] transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-[#FDE68B]/5">
+                  <div className="w-10 h-10 border border-[#DBE3E9]/20 flex items-center justify-center flex-shrink-0 rounded-lg group-hover:bg-[#DBE3E9] group-hover:text-[#181818] transition-all duration-300 group-hover:scale-110 group-hover:rotate-3 shadow-lg shadow-[#DBE3E9]/5">
                     <Icon size={18} className="text-inherit" strokeWidth={2} />
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-white text-lg font-black leading-tight tracking-tight italic group-hover:text-[#FDE68B] transition-colors">
+                <h3 className="text-white text-lg font-normal leading-tight tracking-tight italic group-hover:text-[#DBE3E9] transition-colors">
                   {item.title}
                 </h3>
 
                 {/* Bottom dot decorative */}
-                <div className="w-6 h-[2px] bg-[#FDE68B] opacity-20 mt-auto group-hover:w-full group-hover:opacity-40 transition-all duration-500" />
+                <div className="w-6 h-[2px] bg-[#DBE3E9] opacity-20 mt-auto group-hover:w-full group-hover:opacity-40 transition-all duration-500" />
               </motion.div>
             )
           })}
@@ -91,14 +91,15 @@ export default function ProjectHighlights() {
 
         {/* Footer rule */}
         <div className="flex items-center gap-4 mt-12 opacity-20">
-          <div className="flex-1 h-px bg-[#FDE68B]" />
-          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.5em] uppercase">
+          <div className="flex-1 h-px bg-[#DBE3E9]" />
+          <span className="text-[#DBE3E9] text-[10px] font-normal tracking-[0.5em] uppercase">
             MMS CORE SYSTEM
           </span>
-          <div className="flex-1 h-px bg-[#FDE68B]" />
+          <div className="flex-1 h-px bg-[#DBE3E9]" />
         </div>
 
       </div>
     </section>
   )
 }
+

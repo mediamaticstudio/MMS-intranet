@@ -76,20 +76,20 @@ export default function TwoDSection() {
     return (
         <section
             id="2d-animation"
-            className="bg-[#181818] py-24 px-6 md:px-16 relative overflow-hidden border-t border-[#FDE68B]/5"
+            className="bg-[#181818] py-24 px-6 md:px-16 relative overflow-hidden border-t border-[#DBE3E9]/5"
         >
             {/* Subtle radial glow left */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#FDE68B]/3 blur-[150px] rounded-full pointer-events-none" />
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#DBE3E9]/3 blur-[150px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto relative z-10">
 
                 {/* Section Header */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
                     <div className="space-y-4">
-                        <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase">
+                        <span className="text-[#DBE3E9] text-[10px] font-normal tracking-[0.4em] uppercase">
                             Flat. Bold. Effective.
                         </span>
-                        <h2 className="text-5xl md:text-7xl font-black text-[#CFCFCF] tracking-tighter leading-none italic uppercase">
+                        <h2 className="text-5xl md:text-7xl font-normal text-[#FBFBF8] tracking-tighter leading-none italic uppercase">
                             2D
                             <br />
                             <span className="opacity-40">Animation</span>
@@ -101,9 +101,9 @@ export default function TwoDSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="flex items-center p-8 rounded-3xl bg-[#FDE68B]/5 border border-[#FDE68B]/10 self-center"
+                        className="flex items-center p-8 rounded-3xl bg-[#DBE3E9]/5 border border-[#DBE3E9]/10 self-center"
                     >
-                        <p className="text-[#FDE68B]/50 text-[13px] font-medium leading-relaxed tracking-wide">
+                        <p className="text-[#DBE3E9]/50 text-[13px] font-medium leading-relaxed tracking-wide">
                             2D animation creates engaging flat visuals with height and width — widely used in
                             cartoons, explainer videos, and online ads. Simple, stylized, and endlessly versatile.
                         </p>
@@ -111,7 +111,7 @@ export default function TwoDSection() {
                 </div>
 
                 {/* Service List */}
-                <span className="text-[#FDE68B]/35 text-[10px] font-black tracking-[0.4em] mb-0 block">
+                <span className="text-[#DBE3E9]/35 text-[10px] font-normal tracking-[0.4em] mb-0 block">
                     2D Services
                 </span>
                 <ul>
@@ -123,3 +123,5 @@ export default function TwoDSection() {
         </section>
     )
 }
+
+

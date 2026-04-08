@@ -8,6 +8,8 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 export default function IdeasHeader() {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
 
   const navItems = [
     { name: 'About', id: 'about' },
@@ -29,12 +31,26 @@ export default function IdeasHeader() {
     // { name: 'Contact', id: 'footer' }
   ]
 
+  const allServices = navItems.find(item => item.id === 'services')?.dropdownItems || []
+  const filteredServices = searchQuery.trim() === '' 
+    ? [] 
+    : allServices.filter(service => 
+        service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        service.desc.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Implement search logic here if needed, or redirect
+    console.log('Searching for:', searchQuery)
+  }
+
   return (
-    <header className="fixed top-0 left-0 w-full z-[100] bg-[#181818]/80 backdrop-blur-md border-b border-[#FDE68B]/5 px-6 py-5 flex items-center justify-between">
+    <header className="fixed top-0 left-0 w-full z-[100] bg-[#181818]/80 backdrop-blur-md border-b border-[#DBE3E9]/5 px-6 py-5 flex items-center justify-between">
       {/* Logo */}
       <Link href="/" className="flex items-center gap-4 group">
         <div className="relative w-12 h-12 flex items-center justify-center">
-          <div className="absolute inset-0 bg-[#FDE68B]/20 rounded-full blur-xl scale-0 group-hover:scale-150 transition-transform duration-700" />
+          <div className="absolute inset-0 bg-[#DBE3E9]/20 rounded-full blur-xl scale-0 group-hover:scale-150 transition-transform duration-700" />
           <Image
             src="/lOGO.webp"
             alt="MMS Logo"
@@ -44,10 +60,6 @@ export default function IdeasHeader() {
             priority
           />
         </div>
-        {/* <div className="flex flex-col">
-          <span className="text-[#FDE68B] font-black tracking-tighter text-2xl italic group-hover:text-white transition-colors duration-300">MMS.</span>
-          <span className="text-[7px] text-[#FDE68B]/40 font-bold tracking-[0.3em] -mt-1 group-hover:text-[#FDE68B]/80 transition-colors">STUDIO</span>
-        </div> */}
       </Link>
 
       {/* Navigation */}
@@ -61,7 +73,7 @@ export default function IdeasHeader() {
           >
             <Link
               href={item.id === 'pricing' ? '/pricing' : (item.hasDropdown ? '#services' : `/#${item.id}`)}
-              className="text-[10px] font-black tracking-[0.4em] text-[#FDE68B] hover:opacity-60 transition-all flex items-center gap-1"
+              className="text-[10px] font-normal tracking-[0.4em] text-[#DBE3E9] hover:opacity-60 transition-all flex items-center gap-1"
             >
               {item.name}
               {item.hasDropdown && <ChevronDown size={10} className={`transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />}
@@ -76,24 +88,24 @@ export default function IdeasHeader() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
-                    className="absolute top-full left-0 mt-4 w-72 bg-[#181818] border border-[#FDE68B]/10 rounded-2xl shadow-2xl p-4 overflow-hidden"
+                    className="absolute top-full left-0 mt-4 w-72 bg-[#181818] border border-[#DBE3E9]/10 rounded-2xl shadow-2xl p-4 overflow-hidden"
                   >
-                    <div className="absolute top-0 left-0 w-full h-1 bg-[#FDE68B]" />
+                    <div className="absolute top-0 left-0 w-full h-1 bg-[#DBE3E9]" />
                     <div className="space-y-1">
                       {item.dropdownItems?.map((subItem, idx) => (
                         <Link
                           key={idx}
                           href={subItem.href}
-                          className="flex items-center gap-4 p-3 rounded-xl hover:bg-[#FDE68B] group/item transition-all"
+                          className="flex items-center gap-4 p-3 rounded-xl hover:bg-[#DBE3E9] group/item transition-all"
                         >
-                          <div className="w-8 h-8 rounded-lg bg-[#FDE68B]/10 flex items-center justify-center text-[#FDE68B] group-hover/item:bg-[#181818] transition-colors">
+                          <div className="w-8 h-8 rounded-lg bg-[#DBE3E9]/10 flex items-center justify-center text-[#DBE3E9] group-hover/item:bg-[#181818] transition-colors">
                             {subItem.icon}
                           </div>
                           <div className="flex flex-col">
-                            <span className="text-[10px] font-black text-[#FDE68B] tracking-widest group-hover/item:text-[#181818] transition-colors">
+                            <span className="text-[10px] font-normal text-[#DBE3E9] tracking-widest group-hover/item:text-[#181818] transition-colors">
                               {subItem.name}
                             </span>
-                            <span className="text-[8px] font-bold text-[#FDE68B]/40 tracking-tighter group-hover/item:text-[#181818]/60 transition-colors">
+                            <span className="text-[8px] font-normal text-[#DBE3E9]/40 tracking-tighter group-hover/item:text-[#181818]/60 transition-colors">
                               {subItem.desc}
                             </span>
                           </div>
@@ -109,23 +121,88 @@ export default function IdeasHeader() {
       </nav>
 
       {/* Icons */}
-      <div className="flex items-center gap-6 text-[#FDE68B]">
-        <button className="hover:opacity-60 transition-opacity hidden sm:block">
-          <Search size={18} />
-        </button>
-        <div className="relative group cursor-pointer hover:opacity-60 transition-opacity">
-          <ShoppingBag size={18} />
-          <span className="absolute -top-1.5 -right-1.5 bg-[#FDE68B] text-[#181818] text-[8px] w-4 h-4 rounded-full flex items-center justify-center font-black">0</span>
+      <div className="flex items-center gap-6 text-[#DBE3E9]">
+        <div className="relative">
+          <form onSubmit={handleSearch} className="flex items-center gap-4">
+            <AnimatePresence>
+              {isSearchOpen && (
+                <motion.input
+                  initial={{ width: 0, opacity: 0 }}
+                  animate={{ width: 220, opacity: 1 }}
+                  exit={{ width: 0, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
+                  type="text"
+                  placeholder="SEARCH FOR SERVICES..."
+                  className="bg-[#DBE3E9]/5 border border-[#DBE3E9]/10 rounded-full px-5 py-2 text-[9px] font-normal tracking-widest outline-none focus:border-[#DBE3E9]/30 focus:bg-[#DBE3E9]/10 transition-all placeholder:text-[#DBE3E9]/20"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  autoFocus
+                />
+              )}
+            </AnimatePresence>
+            <button 
+              type="button"
+              onClick={() => {
+                setIsSearchOpen(!isSearchOpen)
+                if (isSearchOpen) setSearchQuery('')
+              }}
+              className="hover:opacity-60 transition-opacity hidden sm:block"
+            >
+              <Search size={18} />
+            </button>
+          </form>
+
+          {/* Search Results Dropdown */}
+          <AnimatePresence>
+            {isSearchOpen && filteredServices.length > 0 && (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 10 }}
+                className="absolute top-full right-0 mt-4 w-80 bg-[#181818] border border-[#DBE3E9]/10 rounded-2xl shadow-2xl p-2 overflow-hidden z-[110]"
+              >
+                <div className="max-h-60 overflow-y-auto custom-scrollbar">
+                  {filteredServices.map((service, idx) => (
+                    <Link
+                      key={idx}
+                      href={service.href}
+                      onClick={() => {
+                        setIsSearchOpen(false)
+                        setSearchQuery('')
+                      }}
+                      className="flex items-center gap-4 p-3 rounded-xl hover:bg-[#DBE3E9] group/item transition-all"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-[#DBE3E9]/10 flex items-center justify-center text-[#DBE3E9] group-hover/item:bg-[#181818] transition-colors">
+                        {service.icon}
+                      </div>
+                      <div className="flex flex-col">
+                        <span className="text-[10px] font-normal text-[#DBE3E9] tracking-widest group-hover/item:text-[#181818] transition-colors">
+                          {service.name}
+                        </span>
+                        <span className="text-[8px] font-normal text-[#DBE3E9]/40 tracking-tighter group-hover/item:text-[#181818]/60 transition-colors">
+                          {service.desc}
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
+
         <button className="md:hidden">
           <Menu size={24} />
         </button>
 
         {/* CTAs */}
-        <button className="hidden md:block text-[10px] font-black tracking-widest text-[#181818] bg-[#FDE68B] px-8 py-3 rounded-full hover:scale-105 transition-transform">
+        {/* <button className="hidden md:block text-[10px] font-normal tracking-widest text-[#181818] bg-[#DBE3E9] px-8 py-3 rounded-full hover:scale-105 transition-transform">
           GET STARTED
-        </button>
+        </button> */}
       </div>
     </header>
   )
 }
+
+
+

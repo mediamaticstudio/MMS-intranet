@@ -13,16 +13,16 @@ const portfolioItems = [
 
 export default function IdeasPortfolio() {
   return (
-    <section id="portfolio" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#FDE68B]/5">
+    <section id="portfolio" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#DBE3E9]/5">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
           <div className="space-y-4">
-            <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] uppercase">OUR PORTFOLIO</span>
-            <h2 className="text-4xl md:text-6xl font-black text-[#FDE68B] tracking-tighter leading-none italic uppercase">
+            <span className="text-[#DBE3E9] text-[10px] font-normal tracking-[0.4em] uppercase">OUR PORTFOLIO</span>
+            <h2 className="text-4xl md:text-6xl font-normal text-[#DBE3E9] tracking-tighter leading-none italic uppercase">
               Selected <br /> <span className="opacity-60">Works</span>
             </h2>
           </div>
-          <p className="text-[#FDE68B]/50 max-w-sm text-sm font-medium leading-relaxed">
+          <p className="text-[#DBE3E9]/50 max-w-sm text-sm font-normal leading-relaxed">
             A showcase of our commitment to turning complex ideas into tangible reality through design and technology.
           </p>
         </div>
@@ -35,23 +35,23 @@ export default function IdeasPortfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative h-[450px] rounded-3xl overflow-hidden border border-[#FDE68B]/10 bg-[#FDE68B]/5 cursor-pointer"
+              className="group relative h-[450px] rounded-3xl overflow-hidden border border-[#DBE3E9]/10 bg-[#DBE3E9]/5 cursor-pointer"
             >
               <img
                 src={item.image}
                 alt={item.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0 opacity-80"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#FDE68B] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
-                <span className="text-[#181818]/60 text-[10px] font-black tracking-widest mb-2">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#DBE3E9] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-8">
+                <span className="text-[#181818]/60 text-[10px] font-normal tracking-widest mb-2">
                   {item.category}
                 </span>
-                <h3 className="text-2xl font-black text-[#181818] tracking-tighter mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-2xl font-normal text-[#181818] tracking-tighter mb-4 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   {item.title}
                 </h3>
                 <div className="flex flex-wrap gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
                   {item.tags.map(tag => (
-                    <span key={tag} className="px-3 py-1 rounded-full bg-[#181818]/10 border border-[#181818]/20 text-[#181818] text-[9px] font-bold tracking-tight">
+                    <span key={tag} className="px-3 py-1 rounded-full bg-[#181818]/10 border border-[#181818]/20 text-[#181818] text-[9px] font-normal tracking-tight">
                       {tag}
                     </span>
                   ))}
@@ -64,3 +64,4 @@ export default function IdeasPortfolio() {
     </section>
   )
 }
+

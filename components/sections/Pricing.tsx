@@ -29,11 +29,11 @@ const plans = [
 
 export default function IdeasPricing() {
   return (
-    <section id="pricing" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#FDE68B]/5">
+    <section id="pricing" className="bg-[#181818] py-32 px-6 md:px-20 border-t border-[#DBE3E9]/5">
       <div className="max-w-7xl mx-auto">
         <div className="mb-20 text-center">
-          <span className="text-[#FDE68B] text-[10px] font-black tracking-[0.4em] mb-4 block">INVEST IN GROWTH</span>
-          <h2 className="text-4xl md:text-6xl font-black text-[#FDE68B] tracking-tighter leading-none italic uppercase">
+          <span className="text-[#DBE3E9] text-[10px] font-normal tracking-[0.4em] mb-4 block">INVEST IN GROWTH</span>
+          <h2 className="text-4xl md:text-6xl font-normal text-[#DBE3E9] tracking-tighter leading-none italic uppercase">
             Tiered <br /> <span className="opacity-60">Architectures</span>
           </h2>
         </div>
@@ -46,27 +46,27 @@ export default function IdeasPricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`group p-10 rounded-[3rem] ${plan.popular ? 'bg-[#FDE68B] text-[#181818] scale-105 shadow-2xl shadow-[#FDE68B]/30' : 'bg-[#FDE68B]/5 border border-[#FDE68B]/10 text-[#FDE68B]'} flex flex-col justify-between min-h-[600px] transition-all duration-500`}
+              className={`group p-10 rounded-[3rem] ${plan.popular ? 'bg-[#DBE3E9] text-[#181818] scale-105 shadow-2xl shadow-[#DBE3E9]/30' : 'bg-[#DBE3E9]/5 border border-[#DBE3E9]/10 text-[#DBE3E9]'} flex flex-col justify-between min-h-[600px] transition-all duration-500`}
             >
               <div>
                 <div className="flex justify-between items-center mb-8">
-                  <h3 className="text-2xl font-black tracking-tighter uppercase">{plan.name}</h3>
-                  {plan.popular && <span className="px-3 py-1 rounded-full bg-[#181818]/10 border border-[#181818]/20 text-[#181818] text-[9px] font-bold uppercase">MOST POPULAR</span>}
+                  <h3 className="text-2xl font-normal tracking-tighter uppercase">{plan.name}</h3>
+                  {plan.popular && <span className="px-3 py-1 rounded-full bg-[#181818]/10 border border-[#181818]/20 text-[#181818] text-[9px] font-normal uppercase">MOST POPULAR</span>}
                 </div>
                 <div className="mb-8">
-                  <span className="text-5xl md:text-6xl font-black tracking-tighter">{plan.price}</span>
+                  <span className="text-5xl md:text-6xl font-normal tracking-tighter">{plan.price}</span>
                   <span className="text-xs opacity-60 ml-2">/ per project</span>
                 </div>
                 <ul className="space-y-4 mb-12">
                   {plan.features.map(feature => (
-                    <li key={feature} className="flex items-center gap-3 text-sm font-medium tracking-tight opacity-70 uppercase">
-                      <div className={`w-1.5 h-1.5 rounded-full ${plan.popular ? 'bg-[#181818]' : 'bg-[#FDE68B]'}`} />
+                    <li key={feature} className="flex items-center gap-3 text-sm font-normal tracking-tight opacity-70 uppercase">
+                      <div className={`w-1.5 h-1.5 rounded-full ${plan.popular ? 'bg-[#181818]' : 'bg-[#DBE3E9]'}`} />
                       {feature}
                     </li>
                   ))}
                 </ul>
               </div>
-              <button className={`w-full py-6 rounded-full font-black tracking-widest text-[10px] transition-all duration-500 ${plan.popular ? 'bg-[#181818] text-[#FDE68B] hover:bg-[#181818]/90' : 'bg-[#FDE68B] text-[#181818] hover:bg-[#FDE68B]/90 shadow-xl shadow-[#FDE68B]/20'}`}>
+              <button className={`w-full py-6 rounded-full font-normal tracking-widest text-[10px] transition-all duration-500 ${plan.popular ? 'bg-[#181818] text-[#DBE3E9] hover:bg-[#181818]/90' : 'bg-[#DBE3E9] text-[#181818] hover:bg-[#DBE3E9]/90 shadow-xl shadow-[#DBE3E9]/20'}`}>
                 Get Started Now
               </button>
             </motion.div>
@@ -76,3 +76,4 @@ export default function IdeasPricing() {
     </section>
   )
 }
+
